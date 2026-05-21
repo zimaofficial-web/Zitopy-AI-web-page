@@ -1,11 +1,11 @@
 /* ==========================================================================
-   PLUGTOCART — Premium Interactive Scripting
+   ZITOPY AI — Premium Interactive Scripting
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initInteractiveBackground();
   initThemeToggle();
-  initWhatsAppSimulator();
+  initWhatsAppSimulators();
 });
 
 /* ==========================================================================
@@ -134,11 +134,11 @@ function initInteractiveBackground() {
       mouse.y = undefined;
     }
 
-    // Determine current theme style for drawing colors
+    // Determine current theme style for drawing colors (Yellow & Slate Blue styling)
     const isLightMode = document.body.classList.contains('light-mode');
-    const gridLineColor = isLightMode ? 'rgba(37, 99, 235, 0.04)' : 'rgba(255, 255, 255, 0.02)';
-    const gridDotColor = isLightMode ? 'rgba(37, 99, 235, 0.08)' : 'rgba(255, 255, 255, 0.04)';
-    const starColor = isLightMode ? 'rgba(37, 99, 235, 0.25)' : 'rgba(255, 255, 255, 0.35)';
+    const gridLineColor = isLightMode ? 'rgba(59, 130, 246, 0.04)' : 'rgba(251, 191, 36, 0.04)';
+    const gridDotColor = isLightMode ? 'rgba(59, 130, 246, 0.08)' : 'rgba(251, 191, 36, 0.08)';
+    const starColor = isLightMode ? 'rgba(59, 130, 246, 0.25)' : 'rgba(251, 191, 36, 0.35)';
 
     // 1. Update Grid points displacement
     points.forEach((pt) => {
@@ -261,30 +261,38 @@ function initThemeToggle() {
 }
 
 /* ==========================================================================
-   3. WHATSAPP CHAT FLOW SIMULATOR
+   3. MULTIPLE WHATSAPP SIMULATORS (iPhone, Android, Laptop)
    ========================================================================== */
-function initWhatsAppSimulator() {
-  const customerBody = document.getElementById('customer-chat-body');
-  const staffBody = document.getElementById('staff-chat-body');
-  const restartBtn = document.getElementById('restart-simulator-btn');
-  const customerInput = document.getElementById('customer-input-box');
+function initWhatsAppSimulators() {
+  // ScentLux Perfumes (iPhone Mockup)
+  const scentluxMessages = [
+    { type: 'out', text: "Do you have any recommendations for a long-lasting woody fragrance?", time: '9:15 AM', delay: 1000, typeDelay: 1800 },
+    { type: 'in', text: "Welcome to ScentLux! 🪵 For long-lasting woody notes, I highly recommend our *Oud Majestic* (₦24,500) and *Cedar Forest* (₦18,000). Both have a 12+ hour sillage. Would you like to check out or see other collections?", time: '9:15 AM', delay: 2000, typeDelay: 3200 },
+    { type: 'out', text: "Let's go with Oud Majestic. Do you offer delivery to Ikeja?", time: '9:16 AM', delay: 2200, typeDelay: 1500 },
+    { type: 'in', text: "Perfect choice! Yes, we deliver to Ikeja (Standard: ₦1,500, Express: ₦3,000). Here is your order breakdown:<br>- 1x Oud Majestic EDP (100ml): ₦24,500<br>- Delivery (Ikeja Standard): ₦1,500<br>Total: **₦26,000**", time: '9:16 AM', delay: 2000, typeDelay: 3400 },
+    { type: 'in', text: "💳 Tap here to pay securely via card or bank transfer: <span class='wa-link'>pay.zitopy.com/scentlux/5092</span>", time: '9:17 AM', delay: 1200, typeDelay: 1800 },
+    { type: 'in', text: "🎉 Payment received! Your order is confirmed. Our dispatch rider will contact you tomorrow morning.", time: '9:18 AM', delay: 4000, typeDelay: 2200 }
+  ];
 
-  if (!customerBody || !staffBody) return;
+  // TrendThread Boutique (Android Mockup)
+  const trendthreadMessages = [
+    { type: 'out', text: "Hi, is the Velvet Slip Dress still available in size M?", time: '9:16 AM', delay: 1500, typeDelay: 1500 },
+    { type: 'in', text: "Hi there! Let me check our stock... 👗 Yes! We have 3 Velvet Slip Dresses in size M (Crimson Red & Midnight Black). They are currently ₦12,500 each. Would you like me to reserve one?", time: '9:16 AM', delay: 2200, typeDelay: 3000 },
+    { type: 'out', text: "Awesome! I'll take the Midnight Black one. And please add a silver pendant necklace if you have.", time: '9:17 AM', delay: 2200, typeDelay: 2000 },
+    { type: 'in', text: "Added! 💎 Here is your boutique order:<br>- 1x Velvet Slip Dress (Midnight Black, M): ₦12,500<br>- 1x Minimalist Silver Pendant: ₦4,500<br>Total: **₦17,000**", time: '9:17 AM', delay: 2000, typeDelay: 3000 },
+    { type: 'in', text: "💳 Generate your secure checkout link: <span class='wa-link'>pay.zitopy.com/trendthread/6102</span>", time: '9:18 AM', delay: 1200, typeDelay: 1800 },
+    { type: 'in', text: "🎉 Paid! We've reserved your items and packaged them. Standard shipping leaves at 2 PM today.", time: '9:19 AM', delay: 4000, typeDelay: 2200 }
+  ];
 
-  let simTimeline = [];
-  let timeouts = [];
-  let isWaitingForAccept = false;
-  let autoAcceptTimeout = null;
-
-  // Clear all pending timeouts
-  function clearAllTimers() {
-    timeouts.forEach(clearTimeout);
-    timeouts = [];
-    if (autoAcceptTimeout) {
-      clearTimeout(autoAcceptTimeout);
-      autoAcceptTimeout = null;
-    }
-  }
+  // BiteBound Restaurant (Laptop Mockup)
+  const biteboundMessages = [
+    { type: 'out', text: "Hello, do you open for lunch deliveries now? I want to order a family platter.", time: '9:15 AM', delay: 2000, typeDelay: 1500, sideText: "Lunch deliveries?" },
+    { type: 'in', text: "Hello from BiteBound! 🍖 Yes, we are open! Our popular *Grill Family Feast* is ₦22,000 (includes 1kg ribs, 4 chicken wings, corn, and fries). We also have the *Spicy Seafood Platter* (₦28,000). What can I get for you?", time: '9:16 AM', delay: 2500, typeDelay: 3500, sideText: "Hello from BiteBound! 🍖" },
+    { type: 'out', text: "Let's do the Grill Family Feast. Add extra barbecue sauce and 2 bottles of Chapman.", time: '9:16 AM', delay: 2500, typeDelay: 2000, sideText: "Grill Family Feast..." },
+    { type: 'in', text: "Got it! Barbecue sauce is free, and 2 bottles of Chapman are ₦2,000. Here's your order:<br>- 1x Grill Family Feast platter: ₦22,000<br>- 2x House Chapman: ₦2,000<br>Total: **₦24,000**", time: '9:17 AM', delay: 2500, typeDelay: 3000, sideText: "Got it! Barbecue..." },
+    { type: 'in', text: "💳 Complete payment here to send directly to the kitchen: <span class='wa-link'>pay.zitopy.com/bitebound/7291</span>", time: '9:17 AM', delay: 1200, typeDelay: 1800, sideText: "💳 Complete payment..." },
+    { type: 'in', text: "🎉 Payment Confirmed! 👨‍🍳 Order #7291 has been sent to the kitchen. Est. prep and delivery time: 40 minutes.", time: '9:18 AM', delay: 4000, typeDelay: 2200, sideText: "Order #7291 sent to..." }
+  ];
 
   // Helper to scroll chats
   function scrollChat(element) {
@@ -321,254 +329,146 @@ function initWhatsAppSimulator() {
   }
 
   // Add a standard message bubble
-  function addMessage({
-    phone = 'customer',
+  function addMessage(bodyElement, {
     type = 'in', // 'in' or 'out'
     content = '',
-    time = '',
-    customClass = '',
-    customHtml = null
+    time = ''
   }) {
-    const bodyElement = phone === 'customer' ? customerBody : staffBody;
     removeTyping(bodyElement);
 
     const bubble = document.createElement('div');
-    bubble.className = `wa-bubble ${type} ${customClass}`;
+    bubble.className = `wa-bubble ${type}`;
 
-    if (customHtml) {
-      bubble.innerHTML = customHtml;
-    } else {
-      bubble.innerHTML = `
-        <div class="wa-msg-content">${content}</div>
-        <div class="wa-bubble-meta">
-          <span class="wa-msg-time">${time}</span>
-          ${type === 'out' ? `<span class="wa-receipt-tick">✓✓</span>` : ''}
-        </div>
-      `;
-    }
+    bubble.innerHTML = `
+      <div class="wa-msg-content">${content}</div>
+      <div class="wa-bubble-meta">
+        <span class="wa-msg-time">${time}</span>
+        ${type === 'out' ? `<span class="wa-receipt-tick">✓✓</span>` : ''}
+      </div>
+    `;
 
     bodyElement.appendChild(bubble);
     scrollChat(bodyElement);
   }
 
-  // Main simulator flow definition
-  function runSimulator() {
-    clearAllTimers();
-    isWaitingForAccept = false;
+  // Character typing animation for the customer's input placeholder
+  function animateTypingText(inputEl, text, speed, callback) {
+    let index = 0;
+    inputEl.textContent = "";
+    inputEl.classList.add("typing-text");
 
-    // Reset UI contents
-    customerBody.innerHTML = '';
-    staffBody.innerHTML = '';
-    customerInput.textContent = 'Type a message...';
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        inputEl.textContent += text.charAt(index);
+        index++;
+      } else {
+        clearInterval(interval);
+        inputEl.classList.remove("typing-text");
+        setTimeout(() => {
+          inputEl.textContent = "Type a message...";
+          callback();
+        }, 600);
+      }
+    }, speed);
 
-    // Step 1: Customer messages interest in chickens & eggs
-    scheduleStep(500, () => {
-      showTyping(customerBody);
-      customerInput.textContent = 'Writing: "Hi I need 1 full chicken..."';
-    });
+    return interval;
+  }
 
-    scheduleStep(2200, () => {
-      customerInput.textContent = 'Type a message...';
-      addMessage({
-        phone: 'customer',
-        type: 'out',
-        content: 'Hi I need 1 full chicken and a crate of eggs please',
-        time: '9:12 AM'
-      });
-    });
+  // Orchestrate single simulator chat loop
+  function runChatSimulator({ chatBodyId, inputSelector, messages, sideMsgId, initialOffset = 0 }) {
+    const chatBody = document.getElementById(chatBodyId);
+    const inputEl = document.querySelector(inputSelector);
+    const sideMsgEl = sideMsgId ? document.getElementById(sideMsgId) : null;
 
-    // Step 2: Bot responds with prices
-    scheduleStep(3200, () => {
-      showTyping(customerBody);
-    });
+    if (!chatBody || !inputEl) return;
 
-    scheduleStep(5200, () => {
-      addMessage({
-        phone: 'customer',
-        type: 'in',
-        content: 'Hello Chioma! 🐓 Here\'s what I found:<br>🍗 Whole Chicken (1.5kg) — ₦5,200<br>🥚 Crate of Eggs (30pcs) — ₦4,800<br><br>Anything else or checkout?',
-        time: '9:12 AM'
-      });
-    });
+    let currentTimeout = null;
+    let currentInterval = null;
 
-    // Step 3: Customer adds turkey wings
-    scheduleStep(6500, () => {
-      showTyping(customerBody);
-      customerInput.textContent = 'Writing: "Add 1kg of turkey wings"';
-    });
+    function runLoop() {
+      // Clear previous logs
+      chatBody.innerHTML = '';
+      inputEl.textContent = 'Type a message...';
+      if (sideMsgEl) {
+        sideMsgEl.textContent = 'Active chat...';
+      }
 
-    scheduleStep(8000, () => {
-      customerInput.textContent = 'Type a message...';
-      addMessage({
-        phone: 'customer',
-        type: 'out',
-        content: 'Add 1kg of turkey wings',
-        time: '9:13 AM'
-      });
-    });
+      let stepIndex = 0;
 
-    // Step 4: Bot compiles order
-    scheduleStep(9000, () => {
-      showTyping(customerBody);
-    });
-
-    scheduleStep(11000, () => {
-      addMessage({
-        phone: 'customer',
-        type: 'in',
-        content: 'Done! Your order:<br>1x Whole Chicken — ₦5,200<br>1x Crate of Eggs — ₦4,800<br>1x Turkey Wings — ₦3,500<br><br>Total: <b>₦13,500</b>',
-        time: '9:13 AM'
-      });
-    });
-
-    // Step 5: Bot sends payment link AND notifies staff
-    scheduleStep(12200, () => {
-      showTyping(customerBody);
-    });
-
-    scheduleStep(13500, () => {
-      addMessage({
-        phone: 'customer',
-        type: 'in',
-        content: '💳 Pay securely here: <span class="wa-link">pay.plugtocart.com/ord/2887</span>',
-        time: '9:14 AM'
-      });
-
-      // Render staff incoming order notification card
-      const orderHtml = `
-        <div class="staff-order-header">⚠️ New Order #2887</div>
-        <div class="staff-order-body">
-          1x Whole Chicken (1.5kg)<br>
-          1x Crate of Eggs (30pcs)<br>
-          1x Turkey Wings (1kg)<br>
-          Customer: Chioma C.
-        </div>
-        <button class="btn-accept-order" id="accept-order-btn">Accept order</button>
-        <div class="wa-bubble-meta">
-          <span class="wa-msg-time" style="color: rgba(255,255,255,0.4)">9:14 AM</span>
-        </div>
-      `;
-
-      addMessage({
-        phone: 'staff',
-        type: 'in',
-        customClass: 'staff-order-bubble',
-        customHtml: orderHtml
-      });
-
-      // Wait for user interaction
-      isWaitingForAccept = true;
-      
-      // Auto-trigger confirmation if user doesn't click after 9s to keep demo running
-      autoAcceptTimeout = setTimeout(() => {
-        const acceptBtn = document.getElementById('accept-order-btn');
-        if (acceptBtn) {
-          triggerOrderConfirmation(acceptBtn);
+      function executeNextStep() {
+        if (stepIndex >= messages.length) {
+          // Restart after 8 seconds
+          currentTimeout = setTimeout(runLoop, 8000);
+          return;
         }
-      }, 9000);
-    });
-  }
 
-  // Schedule timeline helper
-  function scheduleStep(delay, callback) {
-    const t = setTimeout(callback, delay);
-    timeouts.push(t);
-  }
+        const msg = messages[stepIndex];
+        
+        // Wait delay before beginning the step
+        currentTimeout = setTimeout(() => {
+          if (msg.type === 'out') {
+            // Customer typing: simulate key presses in the input box first
+            currentInterval = animateTypingText(inputEl, msg.text, 35, () => {
+              // Add actual message bubble to chat body
+              addMessage(chatBody, {
+                type: 'out',
+                content: msg.text,
+                time: msg.time
+              });
+              if (sideMsgEl && msg.sideText) {
+                sideMsgEl.textContent = msg.sideText;
+              }
+              stepIndex++;
+              executeNextStep();
+            });
+          } else {
+            // AI responding: show typing bubble indicator
+            showTyping(chatBody);
+            currentTimeout = setTimeout(() => {
+              addMessage(chatBody, {
+                type: 'in',
+                content: msg.text,
+                time: msg.time
+              });
+              if (sideMsgEl && msg.sideText) {
+                sideMsgEl.textContent = msg.sideText;
+              }
+              stepIndex++;
+              executeNextStep();
+            }, msg.typeDelay);
+          }
+        }, msg.delay);
+      }
 
-  // Handle Order Accept Action
-  function triggerOrderConfirmation(buttonEl) {
-    if (!isWaitingForAccept) return;
-    isWaitingForAccept = false;
-
-    if (autoAcceptTimeout) {
-      clearTimeout(autoAcceptTimeout);
-      autoAcceptTimeout = null;
+      executeNextStep();
     }
 
-    // Animate button state
-    buttonEl.textContent = '✓ Order Accepted';
-    buttonEl.classList.add('clicked');
-    buttonEl.disabled = true;
-
-    // Staff dashboard logs output
-    scheduleStep(600, () => {
-      addMessage({
-        phone: 'staff',
-        type: 'out',
-        content: 'Order #2887 confirmed. Payment link sent to Chioma.',
-        time: '9:15 AM'
-      });
-    });
-
-    // Notify customer phone dashboard has received confirmation
-    scheduleStep(1200, () => {
-      addMessage({
-        phone: 'customer',
-        type: 'in',
-        content: '💬 Order accepted by merchant staff. Awaiting payment checkout...',
-        time: '9:15 AM'
-      });
-    });
-
-    // Step 7: Payment Received card on Staff View
-    scheduleStep(4200, () => {
-      const paymentHtml = `
-        <div class="staff-order-header" style="color: #10b981;">🟢 Payment Received</div>
-        <div class="staff-order-body">
-          Order #2887 — ₦13,500<br>
-          Ready for dispatch
-        </div>
-        <div class="wa-bubble-meta">
-          <span class="wa-msg-time" style="color: rgba(255,255,255,0.4)">9:22 AM</span>
-        </div>
-      `;
-
-      addMessage({
-        phone: 'staff',
-        type: 'in',
-        customClass: 'staff-order-bubble',
-        customHtml: paymentHtml
-      });
-    });
-
-    // Step 8: Stock Warning on Staff View
-    scheduleStep(6200, () => {
-      const alertHtml = `
-        <div class="staff-order-header" style="color: #f59e0b;">⚠️ Stock Alert</div>
-        <div class="staff-order-body">
-          Turkey Wings — 3 left
-        </div>
-        <div class="wa-bubble-meta">
-          <span class="wa-msg-time" style="color: rgba(255,255,255,0.4)">9:23 AM</span>
-        </div>
-      `;
-
-      addMessage({
-        phone: 'staff',
-        type: 'in',
-        customClass: 'staff-order-bubble alert-bubble',
-        customHtml: alertHtml
-      });
-    });
-
-    // Restart Timeline loop
-    scheduleStep(15000, () => {
-      runSimulator();
-    });
+    // Start with offset to stagger the animations naturally
+    setTimeout(runLoop, initialOffset);
   }
 
-  // Click delegation for Accept Order Button
-  document.body.addEventListener('click', (e) => {
-    if (e.target && e.target.id === 'accept-order-btn') {
-      triggerOrderConfirmation(e.target);
-    }
+  // Initialize and run ScentLux Perfumes on iPhone
+  runChatSimulator({
+    chatBodyId: 'scentlux-chat-body',
+    inputSelector: '#iphone-simulator .wa-input-placeholder',
+    messages: scentluxMessages,
+    initialOffset: 0
   });
 
-  // Manual restart click handler
-  restartBtn.addEventListener('click', () => {
-    runSimulator();
+  // Initialize and run TrendThread Boutique on Android
+  runChatSimulator({
+    chatBodyId: 'trendthread-chat-body',
+    inputSelector: '#android-simulator .wa-input-placeholder',
+    messages: trendthreadMessages,
+    initialOffset: 2500 // Staggered delay
   });
 
-  // Initial trigger
-  runSimulator();
+  // Initialize and run BiteBound Restaurant on Laptop
+  runChatSimulator({
+    chatBodyId: 'bitebound-chat-body',
+    inputSelector: '.laptop-container .wa-web-input-bar',
+    messages: biteboundMessages,
+    sideMsgId: 'grill-side-msg',
+    initialOffset: 5000 // Staggered delay
+  });
 }
