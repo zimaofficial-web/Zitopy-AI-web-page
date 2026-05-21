@@ -1,106 +1,64 @@
-# ZITOPY AI — Interactive Property Intelligence Platform
+# PlugToCart — Turn WhatsApp Chats into Sales on Autopilot
 
-Welcome to the **ZITOPY AI** (Verifind Marketplace) codebase. This platform is designed to connect buyers, renters, and agents through AI-powered property matching, immersive video tours, and verified real estate listings.
+PlugToCart is a premium, high-fidelity dark-themed landing page representing an AI-powered retail commerce assistant. Built specifically for African SMEs, it automates product inquiries, processes orders, manages stock levels, and generates secure payment links directly within WhatsApp.
 
-The project is structured in two parts: a high-fidelity **Vanilla Landing Page** (in the root directory) and a modern **React Sub-Application** (in the `app/` directory).
+This project features a state-of-the-art interactive **WhatsApp Order Simulator** (visualizing Customer and Staff interactions side-by-side) and a custom **interactive physics background grid**.
 
 ---
 
-## 🏗️ Project Architecture & Structure
+## 🎨 Immersive Design & Interactive Features
+
+### 1. Interactive Gravity-Warping Grid (`#interactive-bg`)
+- Renders a full-screen dynamic mesh grid of particles and floating stars on an HTML5 `<canvas>`.
+- **Repulsion/Antigravity Effect**: Detects cursor hover (`mousemove`) and touch events (`touchmove`/`touchstart`) on all devices. Nearby particles and grid lines bend, warp, and push away from the cursor in a smooth fluid motion.
+- **Constant Animation**: Uses `requestAnimationFrame` to maintain a steady, high-performance drifting sway in the background.
+
+### 2. Dual-Phone WhatsApp Simulator (Hero Grid)
+- **Customer View (Left Phone)**: Animates a conversation between a buyer ("Chioma") and the "Fresh Poultry" AI bot. It displays typing indicators, compiles items (whole chicken, eggs, turkey wings), and outputs the computed totals with a secure payment link.
+- **Staff View (Right Phone)**: Displays incoming order alerts, real-time dispatch details, and low stock warnings.
+- **Interactive "Accept Order" Flow**: Users can hover and click the **"Accept order"** button inside the Staff phone mockup. Clicking it updates the states of both simulated chats in real-time. If not clicked, the simulation automatically runs a fallback trigger after 9 seconds to remain self-running.
+- **Restart Control**: A floating restart overlay allows visitors to replay the ordering animation sequence at any time.
+
+### 3. Light & Dark Theme Toggle
+- A navigation bar action toggles between the default futuristic dark-mode theme and a high-contrast premium light-mode style using CSS Custom Properties.
+
+---
+
+## 🏗️ Codebase Structure
 
 ```text
-ZITOPY AI/
+ZITOPY AI / PlugToCart
 │
-├── index.html               # Main Landing Page HTML
-├── main.js                  # Landing Page interactive scripts & scroll-reveal
-├── style.css                # Landing Page design system & global style sheet
-├── product.html             # Detailed Product view page
-├── product.js               # Product detail scripts
-├── product.css              # Product detail styling
-├── .gitignore               # Root-level Git ignores (keeps node_modules/dist safe)
-│
-└── app/                     # React Sub-Application
-    ├── package.json         # React dependencies (React 19, Vite 8)
-    ├── vite.config.js       # Vite build configurations
-    ├── SocialActionLinks.jsx # Floating action dock (Canvas Antigravity + Spring animations)
-    ├── SocialActionLinks.css # Dock glassmorphic style & hover accents
-    │
-    └── src/
-        ├── main.jsx         # App mounting point
-        ├── App.jsx          # Layout container & routing assembly
-        ├── index.css        # Global CSS variables & styling tokens
-        ├── App.css          # Core layouts
-        │
-        └── components/      # Reusable UI Components
-            ├── Navbar.jsx       # Glassmorphic header navigation
-            ├── Navbar.css
-            ├── Hero.jsx         # Hero section with animated counter stats
-            ├── Hero.css
-            ├── PropertyFeed.jsx # Interactive property list with match indicators
-            ├── PropertyFeed.css
-            ├── VideoFeed.jsx    # Immersive horizontal video card slider
-            ├── VideoFeed.css
-            └── BookingModal.jsx # Verification booking calendar interface
-            └── BookingModal.css
+├── index.html       # Landing page structure (Hero, Features, Steps, Pricing, Footer)
+├── style.css        # Responsive stylesheet, custom fonts (Outfit/Plus Jakarta), & iOS bubbles
+├── main.js          # Interactive physics canvas grid & async WhatsApp timeline engine
+├── .gitignore       # Git exclusion configurations
+└── README.md        # Documented architecture, features, and setup
 ```
-
----
-
-## ✨ Features & Interactive Details
-
-### 1. Interactive Landing Page (Root)
-- **Ambient Glow Trail**: A custom GPU-accelerated cursor-tracking glow trail follows the mouse cursor around the screen for a highly premium, futuristic layout feel.
-- **Scroll Reveal Animations**: Sections and cards (features, testimonials, pricing) animate smoothly into view as the user scrolls, utilizing staggered delay multipliers.
-- **Dynamic Stats Counters**: Statistics in the hero bar count up from zero with custom ease-out cubic mathematics.
-
-### 2. React Sub-Application (`app/`)
-- **Interactive Action Dock (`SocialActionLinks`)**:
-  - **Antigravity Particle Background**: An HTML5 `<canvas>` background rendering rising particles that sway and float upwards.
-  - **Repulsion Wave Force Field**: Detects cursor hover (`mousemove`) and finger touch (`touchmove`) on mobile devices, pushing particles away in a smooth physical wave.
-  - **Bouncy Spring Animations**: Buttons expand from circular bubbles (`56px`) into pills (`176px`) using a custom spring curves transition: `cubic-bezier(0.175, 0.885, 0.32, 1.275)`.
-  - **Vibrant Accents**: Hovering triggers custom gradients tailored for each button (e.g. WhatsApp green, Agent violet, Verify cyan, Saved pink) with accompanying glow dropshadows.
-- **Filterable Property Feed**: Users can browse listings with dynamic category filters and matching percentages.
-- **Virtual Video Tours**: A custom slider allows visitors to watch cinematic property videos with active scroll controls.
-- **Booking Scheduler Modal**: A modular popup allowing users to book in-person property verification tours.
 
 ---
 
 ## 🛠️ Technology Stack
-- **Landing Page Core**: HTML5, CSS3, ES6 Vanilla JS.
-- **Sub-App Framework**: React 19, Vite 8.
-- **Styling Architecture**: Vanilla CSS and CSS Variables (no external tailwind bundle dependencies, fully customized, high-performance styling).
-- **Animations**: CSS transitions (using custom cubic-beziers), CSS keyframe keying, and HTML5 Canvas API.
+- **Structure**: Semantic HTML5 markup
+- **Styling**: Vanilla CSS3 Custom Properties (no heavy external library dependencies or framework bundles)
+- **Animations**: CSS Keyframe float loops and Canvas 2D Physics rendering
+- **Logic**: ES6+ JavaScript Event listeners, dynamic DOM bubble insertion, and coordinate interpolation (lerp)
 
 ---
 
-## 🚀 Setup & Local Development
+## 🚀 Setup & Local Viewing
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
+Since the root page is written in pure vanilla HTML, CSS, and JS, there is no compile or build script required!
 
-### Running the Sub-App Locally
-To run the React sub-application in development mode:
-
-1. Navigate to the `app` directory:
-   ```bash
-   cd app
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the Vite development server:
-   ```bash
-   npm run dev
-   ```
-   Open the printed URL (typically `http://localhost:5173`) in your browser.
-
-### Building for Production
-To build a production-ready bundle of the React app:
-```bash
-cd app
-npm run build
-```
-The compiled, optimized files will be output to `app/dist/`.
+1. **Direct Run**: Open `index.html` in any web browser.
+2. **Local Web Server (Recommended)**: To avoid potential CORS or local asset path warnings on some systems, run a simple local server:
+   - Using Python:
+     ```bash
+     python -m http.server 8000
+     ```
+     Then navigate to `http://localhost:8000`.
+   - Using Node.js (via `serve` or similar):
+     ```bash
+     npx serve
+     ```
+     Then navigate to `http://localhost:3000`.

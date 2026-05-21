@@ -3,402 +3,324 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ZITOPY AI — The next-generation AI platform built for speed, security, and intelligence. Unlock the future with powerful AI tools designed for ambitious teams." />
-  <title>ZITOPY AI — Intelligence Redefined</title>
+  <meta name="description" content="PlugToCart — Turn WhatsApp chats into sales on autopilot. Automate ordering, inventory management, and secure payment links for African SMEs." />
+  <title>PlugToCart — Turn WhatsApp Chats into Sales on Autopilot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Background Canvas for Interactive Gravity Grid Animation -->
+  <canvas id="interactive-bg"></canvas>
+
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo" id="nav-logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">ZITOPY<span class="logo-ai"> AI</span></span>
+      <a href="#" class="logo" id="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span>PlugToCart</span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#features" class="nav-link">Features</a></li>
         <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
         <li><a href="#pricing" class="nav-link">Pricing</a></li>
-        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
       </ul>
       <div class="nav-actions">
-        <a href="#" class="btn-ghost" id="btn-signin">Sign In</a>
-        <a href="#pricing" class="btn-primary" id="btn-get-started">Get Started</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <!-- Sun Icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <a href="#" class="btn-login" id="btn-login">Log in</a>
+        <a href="#pricing" class="btn-nav-trial" id="btn-nav-trial">Start 7-Day Trial</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- ===================== HERO ===================== -->
+  <!-- ===================== HERO SECTION ===================== -->
   <section class="hero" id="hero">
-    <div class="hero-bg-orb orb-1"></div>
-    <div class="hero-bg-orb orb-2"></div>
-    <div class="hero-bg-orb orb-3"></div>
-    <div class="grid-overlay"></div>
+    <div class="glow-backdrop-blue"></div>
+    <div class="glow-backdrop-purple"></div>
 
     <div class="hero-container">
-      <div class="hero-badge" id="hero-badge">
-        <span class="badge-dot"></span>
-        <span>Now in Public Beta — Join 12,000+ users</span>
+      <!-- Left Hero Content -->
+      <div class="hero-content">
+        <div class="badge-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Built for SMEs with Simple Sales Processes</span>
+        </div>
+        <h1 class="hero-title">
+          Turn WhatsApp chats<br />
+          into <span>sales on autopilot</span>
+        </h1>
+        <p class="hero-subtitle">
+          Your AI-powered sales assistant takes orders, tracks inventory, and sends payment links 24/7. Built specifically for African SMEs selling fashion, food, pharmacy items, and everyday goods on WhatsApp.
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn-primary">
+            Start 7-Day Free Trial
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px;">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="#how-it-works" class="btn-secondary">
+            Learn More
+          </a>
+        </div>
+        <div class="hero-microtext">No credit card required. Cancel anytime.</div>
       </div>
 
-      <h1 class="hero-title" id="hero-title">
-        Intelligence<br />
-        <span class="gradient-text">Redefined</span><br />
-        for the Future
-      </h1>
-
-      <p class="hero-subtitle" id="hero-subtitle">
-        ZITOPY AI empowers teams with cutting-edge artificial intelligence tools —<br class="hide-mobile"/>
-        built for speed, precision, and scale. Your smarter workflow starts here.
-      </p>
-
-      <div class="hero-cta" id="hero-cta">
-        <a href="#pricing" class="btn-hero-primary" id="btn-hero-primary">
-          Start for Free
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#how-it-works" class="btn-hero-ghost" id="btn-hero-ghost">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          Watch Demo
-        </a>
-      </div>
-
-      <div class="hero-stats" id="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">12K+</span>
-          <span class="stat-label">Active Users</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">99.9%</span>
-          <span class="stat-label">Uptime SLA</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">4.9★</span>
-          <span class="stat-label">User Rating</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">50ms</span>
-          <span class="stat-label">Avg Response</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Floating Code Preview -->
-    <div class="hero-code-card" id="hero-code-card">
-      <div class="code-card-header">
-        <div class="code-dot red"></div>
-        <div class="code-dot yellow"></div>
-        <div class="code-dot green"></div>
-        <span class="code-lang">AI Response</span>
-      </div>
-      <div class="code-body">
-        <div class="code-line"><span class="c-purple">const</span> <span class="c-cyan">response</span> <span class="c-white">= await</span> <span class="c-yellow">zitopy</span><span class="c-white">.</span><span class="c-green">analyze</span><span class="c-white">({</span></div>
-        <div class="code-line indent"><span class="c-cyan">prompt</span><span class="c-white">:</span> <span class="c-orange">"Generate insights"</span><span class="c-white">,</span></div>
-        <div class="code-line indent"><span class="c-cyan">model</span><span class="c-white">:</span> <span class="c-orange">"zitopy-ultra"</span><span class="c-white">,</span></div>
-        <div class="code-line indent"><span class="c-cyan">speed</span><span class="c-white">:</span> <span class="c-purple">true</span></div>
-        <div class="code-line"><span class="c-white">});</span></div>
-        <div class="code-line">&nbsp;</div>
-        <div class="code-line"><span class="c-comment">// ✅ Response in 47ms</span></div>
-        <div class="code-line typing-line"><span class="c-green">console</span><span class="c-white">.</span><span class="c-yellow">log</span><span class="c-white">(response.data)</span><span class="cursor-blink">|</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== LOGOS / TRUST ===================== -->
-  <section class="logos-section" id="logos">
-    <div class="logos-container">
-      <p class="logos-label">Trusted by teams at</p>
-      <div class="logos-track">
-        <div class="logos-scroll">
-          <span class="logo-brand">Lumia Corp</span>
-          <span class="logo-brand">NexaTech</span>
-          <span class="logo-brand">Starfield AI</span>
-          <span class="logo-brand">Orbitlabs</span>
-          <span class="logo-brand">Solaris Co.</span>
-          <span class="logo-brand">Vektor Inc.</span>
-          <span class="logo-brand">Lumia Corp</span>
-          <span class="logo-brand">NexaTech</span>
-          <span class="logo-brand">Starfield AI</span>
-          <span class="logo-brand">Orbitlabs</span>
-          <span class="logo-brand">Solaris Co.</span>
-          <span class="logo-brand">Vektor Inc.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FEATURES ===================== -->
-  <section class="features-section" id="features">
-    <div class="section-container">
-      <div class="section-header">
-        <span class="section-tag">Core Features</span>
-        <h2 class="section-title">Everything you need,<br /><span class="gradient-text">nothing you don't</span></h2>
-        <p class="section-subtitle">A complete AI platform engineered to handle complex tasks with simplicity and elegance.</p>
-      </div>
-
-      <div class="features-grid">
-
-        <div class="feature-card feature-large" id="feature-speed">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon">⚡</div>
+      <!-- Right Hero Phone Simulator -->
+      <div class="hero-mockups-container">
+        <div class="hero-mockups">
+          <!-- Restart Button Overlay -->
+          <button class="simulator-restart-btn" id="restart-simulator-btn">Restart Demo ↺</button>
+          
+          <!-- Customer View Phone (Left) -->
+          <div class="phone-wrapper" id="customer-phone">
+            <div class="smartphone-frame">
+              <!-- Notch & Status Bar -->
+              <div class="device-notch"><div class="notch-camera"></div></div>
+              <div class="device-status-bar">
+                <span class="status-time">9:12</span>
+                <div class="status-bar-icons">
+                  <span>📶</span>
+                  <span>🔋</span>
+                </div>
+              </div>
+              
+              <!-- WhatsApp Window -->
+              <div class="wa-chat-window">
+                <!-- Header -->
+                <div class="wa-header">
+                  <div class="wa-header-left">
+                    <span class="wa-back-btn">‹</span>
+                    <div class="wa-avatar poultry">
+                      🍗
+                      <span class="wa-avatar-status"></span>
+                    </div>
+                    <div class="wa-profile-info">
+                      <span class="wa-profile-name">Fresh Poultry</span>
+                      <span class="wa-profile-status">online</span>
+                    </div>
+                  </div>
+                  <div class="wa-header-right">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 7a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7z"></path><path d="M1 7l11 8 11-8"></path></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                  </div>
+                </div>
+                
+                <!-- Chat Body -->
+                <div class="wa-chat-body" id="customer-chat-body">
+                  <!-- Dynamic chat bubbles will be inserted here -->
+                </div>
+                
+                <!-- Footer Input Area -->
+                <div class="wa-input-area">
+                  <span class="wa-icon-add">+</span>
+                  <div class="wa-input-placeholder" id="customer-input-box">Type a message...</div>
+                  <span class="wa-icon-mic">🎤</span>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-label">Customer View</div>
           </div>
-          <h3 class="feature-title">Blazing Fast Inference</h3>
-          <p class="feature-desc">Sub-100ms response times powered by our distributed inference network. No waiting — just instant intelligence at scale.</p>
-          <div class="feature-bar">
-            <div class="feature-bar-fill" style="width: 94%"></div>
-          </div>
-          <div class="feature-bar-label">94% faster than competitors</div>
-          <div class="feature-glow glow-purple"></div>
-        </div>
 
-        <div class="feature-card" id="feature-security">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon">🛡️</div>
+          <!-- Staff View Phone (Right) -->
+          <div class="phone-wrapper-alt" id="staff-phone">
+            <div class="smartphone-frame">
+              <!-- Notch & Status Bar -->
+              <div class="device-notch"><div class="notch-camera"></div></div>
+              <div class="device-status-bar">
+                <span class="status-time">9:14</span>
+                <div class="status-bar-icons">
+                  <span>📶</span>
+                  <span>🔋</span>
+                </div>
+              </div>
+              
+              <!-- WhatsApp Window / Staff Dashboard -->
+              <div class="wa-chat-window">
+                <!-- Header -->
+                <div class="wa-header">
+                  <div class="wa-header-left">
+                    <span class="wa-back-btn">‹</span>
+                    <div class="wa-avatar bot">
+                      🤖
+                      <span class="wa-avatar-status"></span>
+                    </div>
+                    <div class="wa-profile-info">
+                      <span class="wa-profile-name">Staff Orders</span>
+                      <span class="wa-profile-status">PlugToCart Bot</span>
+                    </div>
+                  </div>
+                  <div class="wa-header-right">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                  </div>
+                </div>
+                
+                <!-- Chat Body -->
+                <div class="wa-chat-body" id="staff-chat-body">
+                  <!-- Dynamic dashboard notifications will be inserted here -->
+                </div>
+                
+                <!-- Footer Input Area -->
+                <div class="wa-input-area">
+                  <div class="wa-input-placeholder">Type a message...</div>
+                  <span class="wa-icon-send">➤</span>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-label">Staff View</div>
           </div>
-          <h3 class="feature-title">Enterprise Security</h3>
-          <p class="feature-desc">SOC 2 Type II certified. End-to-end encryption on all data. Your prompts never train our models.</p>
-          <div class="feature-tags">
-            <span class="tag">SOC 2</span>
-            <span class="tag">GDPR</span>
-            <span class="tag">HIPAA</span>
-          </div>
-          <div class="feature-glow glow-cyan"></div>
         </div>
-
-        <div class="feature-card" id="feature-analytics">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon">📊</div>
-          </div>
-          <h3 class="feature-title">Smart Analytics</h3>
-          <p class="feature-desc">Real-time dashboards track usage, costs, and performance. Make data-driven decisions with confidence.</p>
-          <div class="mini-chart">
-            <div class="bar" style="height: 40%"></div>
-            <div class="bar" style="height: 60%"></div>
-            <div class="bar" style="height: 45%"></div>
-            <div class="bar" style="height: 80%"></div>
-            <div class="bar" style="height: 65%"></div>
-            <div class="bar" style="height: 95%"></div>
-            <div class="bar active" style="height: 75%"></div>
-          </div>
-          <div class="feature-glow glow-green"></div>
-        </div>
-
-        <div class="feature-card" id="feature-multimodal">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon">🧠</div>
-          </div>
-          <h3 class="feature-title">Multimodal Intelligence</h3>
-          <p class="feature-desc">Text, image, audio and video — one unified API. Build complex applications without juggling multiple providers.</p>
-          <div class="feature-glow glow-orange"></div>
-        </div>
-
-        <div class="feature-card" id="feature-integrations">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon">🔗</div>
-          </div>
-          <h3 class="feature-title">100+ Integrations</h3>
-          <p class="feature-desc">Connect ZITOPY AI to Slack, Notion, GitHub, Zapier, and your custom stack in minutes, not days.</p>
-          <div class="integration-pills">
-            <span class="pill">Slack</span>
-            <span class="pill">GitHub</span>
-            <span class="pill">Notion</span>
-            <span class="pill">+97</span>
-          </div>
-          <div class="feature-glow glow-purple"></div>
-        </div>
-
-        <div class="feature-card feature-large" id="feature-automation">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon">⚙️</div>
-          </div>
-          <h3 class="feature-title">Workflow Automation</h3>
-          <p class="feature-desc">Build AI-powered workflows that run autonomously. From drafting emails to analyzing spreadsheets — automate what drains your time.</p>
-          <div class="automation-flow">
-            <div class="flow-step">Trigger</div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step active">AI Process</div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">Output</div>
-          </div>
-          <div class="feature-glow glow-cyan"></div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===================== HOW IT WORKS ===================== -->
+  <!-- ===================== HOW IT WORKS SECTION ===================== -->
   <section class="how-section" id="how-it-works">
     <div class="section-container">
       <div class="section-header">
-        <span class="section-tag">How It Works</span>
-        <h2 class="section-title">Up and running<br /><span class="gradient-text">in 3 simple steps</span></h2>
-        <p class="section-subtitle">No complex setup. No steep learning curve. Start generating value from day one.</p>
+        <span class="section-tag">Workflow</span>
+        <h2 class="section-title">Automate your sales in <span class="gradient-text">three simple steps</span></h2>
+        <p class="section-subtitle">No complicated setups. PlugToCart integrates directly with your WhatsApp Business number to automate your sales funnel.</p>
       </div>
 
-      <div class="steps-wrapper">
-        <div class="step-connector"></div>
-        <div class="steps-grid">
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-icon">💬</div>
+          <h3 class="step-title">1. Customer Messages You</h3>
+          <p class="step-desc">Customers query prices, ask about stock, or send orders on WhatsApp. Our AI understands their intent instantly, even in Pidgin or local slangs.</p>
+        </div>
 
-          <div class="step-card" id="step-1">
-            <div class="step-number">01</div>
-            <div class="step-icon">🔑</div>
-            <h3 class="step-title">Create Your Account</h3>
-            <p class="step-desc">Sign up in seconds. No credit card required. Get instant access to all core features with your free tier.</p>
-          </div>
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-icon">💳</div>
+          <h3 class="step-title">2. Autopilot Checkout</h3>
+          <p class="step-desc">The assistant checks stock, compiles the order, calculates delivery fees, and sends a secure checkout link with local payment options (Card, Transfer, Mobile Money).</p>
+        </div>
 
-          <div class="step-card" id="step-2">
-            <div class="step-number">02</div>
-            <div class="step-icon">🔌</div>
-            <h3 class="step-title">Connect Your Tools</h3>
-            <p class="step-desc">Use our API or no-code connectors to integrate ZITOPY AI into your existing apps and workflows effortlessly.</p>
-          </div>
-
-          <div class="step-card" id="step-3">
-            <div class="step-number">03</div>
-            <div class="step-icon">🚀</div>
-            <h3 class="step-title">Launch & Scale</h3>
-            <p class="step-desc">Deploy AI features to your users. Monitor performance, tweak prompts, and scale from prototype to production.</p>
-          </div>
-
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-icon">📦</div>
+          <h3 class="step-title">3. Staff Notification</h3>
+          <p class="step-desc">As soon as payment is confirmed, your staff is alerted via their private channel or dashboard. Inventory is updated, and delivery details are ready for dispatch.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== PRICING ===================== -->
-  <section class="pricing-section" id="pricing">
-    <div class="hero-bg-orb orb-4"></div>
+  <!-- ===================== FEATURES SECTION ===================== -->
+  <section class="features-section" id="features">
     <div class="section-container">
       <div class="section-header">
-        <span class="section-tag">Pricing</span>
-        <h2 class="section-title">Simple, transparent<br /><span class="gradient-text">pricing for every team</span></h2>
-        <p class="section-subtitle">Start free, scale as you grow. No hidden fees, no surprises.</p>
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Supercharge your shop's operations</h2>
+        <p class="section-subtitle">Features built specifically to solve inventory, order processing, and payment challenges for growing SMEs.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrap">⚡</div>
+          <h3 class="feature-title">24/7 AI Sales Assistant</h3>
+          <p class="feature-desc">Never miss a sale because you were sleeping or busy. The assistant responds instantly to inquiries and collects orders all day long.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">🔒</div>
+          <h3 class="feature-title">Secure Payments</h3>
+          <p class="feature-desc">Integrate with top payment gateways. Support bank transfers, USSD, cards, and mobile wallets. Fully automated verification.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">📦</div>
+          <h3 class="feature-title">Smart Inventory Sync</h3>
+          <p class="feature-desc">Your inventory updates automatically with every sale. Receive low-stock warning alerts directly to avoid over-selling.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">📊</div>
+          <h3 class="feature-title">Real-Time Analytics</h3>
+          <p class="feature-desc">Get clear insights on your best-selling products, daily revenue, average order size, and customer repeat rates in a simple dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING SECTION ===================== -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Pricing Plans</span>
+        <h2 class="section-title">Simple plans for <span class="gradient-text">businesses of all sizes</span></h2>
+        <p class="section-subtitle">All plans start with a 7-day free trial. Scale or cancel at any time.</p>
       </div>
 
       <div class="pricing-grid">
-
-        <div class="price-card" id="price-starter">
+        <!-- Starter Plan -->
+        <div class="price-card">
           <div class="price-plan">Starter</div>
-          <div class="price-amount"><span class="price-currency">$</span>0<span class="price-period">/mo</span></div>
-          <p class="price-desc">Perfect for individuals exploring AI capabilities.</p>
+          <div class="price-amount">₦15,000<span class="price-period">/month</span></div>
+          <p class="price-desc">Perfect for small shops testing automated sales on WhatsApp.</p>
           <ul class="price-features">
-            <li><span class="check">✓</span> 100K tokens / month</li>
-            <li><span class="check">✓</span> 3 AI models</li>
-            <li><span class="check">✓</span> REST API access</li>
-            <li><span class="check">✓</span> Community support</li>
-            <li><span class="muted">✗</span> Team collaboration</li>
-            <li><span class="muted">✗</span> Analytics dashboard</li>
+            <li>✓ 1 WhatsApp Business line</li>
+            <li>✓ Up to 300 orders/month</li>
+            <li>✓ Basic inventory tracker</li>
+            <li>✓ Automated payment links</li>
+            <li>✓ Standard email support</li>
           </ul>
-          <a href="#" class="price-btn price-btn-ghost" id="btn-starter">Get Started Free</a>
+          <a href="#" class="price-btn">Start Starter Trial</a>
         </div>
 
-        <div class="price-card price-featured" id="price-pro">
+        <!-- Pro Plan -->
+        <div class="price-card price-featured">
           <div class="price-badge">Most Popular</div>
           <div class="price-plan">Pro</div>
-          <div class="price-amount"><span class="price-currency">$</span>49<span class="price-period">/mo</span></div>
-          <p class="price-desc">For growing teams that need more power and collaboration.</p>
+          <div class="price-amount">₦35,000<span class="price-period">/month</span></div>
+          <p class="price-desc">Ideal for fast-growing merchants needing full sync and alerts.</p>
           <ul class="price-features">
-            <li><span class="check">✓</span> 5M tokens / month</li>
-            <li><span class="check">✓</span> All AI models</li>
-            <li><span class="check">✓</span> Advanced API + SDKs</li>
-            <li><span class="check">✓</span> Priority support</li>
-            <li><span class="check">✓</span> Team collaboration (5 seats)</li>
-            <li><span class="check">✓</span> Analytics dashboard</li>
+            <li>✓ 1 WhatsApp Business line</li>
+            <li>✓ Unlimited orders/month</li>
+            <li>✓ Smart stock alerts (SMS/WhatsApp)</li>
+            <li>✓ Multi-staff dashboard access</li>
+            <li>✓ 24/7 priority support</li>
           </ul>
-          <a href="#" class="price-btn price-btn-primary" id="btn-pro">Start Pro Trial</a>
+          <a href="#" class="price-btn price-btn-primary">Start Pro Trial</a>
         </div>
 
-        <div class="price-card" id="price-enterprise">
+        <!-- Enterprise Plan -->
+        <div class="price-card">
           <div class="price-plan">Enterprise</div>
-          <div class="price-amount price-custom">Custom</div>
-          <p class="price-desc">For large organizations needing dedicated infrastructure and SLAs.</p>
+          <div class="price-amount">Custom</div>
+          <p class="price-desc">For larger retailers, distributors, and multi-location brands.</p>
           <ul class="price-features">
-            <li><span class="check">✓</span> Unlimited tokens</li>
-            <li><span class="check">✓</span> Fine-tuned models</li>
-            <li><span class="check">✓</span> On-premise deployment</li>
-            <li><span class="check">✓</span> 24/7 dedicated support</li>
-            <li><span class="check">✓</span> Unlimited seats</li>
-            <li><span class="check">✓</span> Custom SLA & compliance</li>
+            <li>✓ Multiple WhatsApp lines</li>
+            <li>✓ Custom AI tone of voice</li>
+            <li>✓ ERP/Custom software integrations</li>
+            <li>✓ Dedicated account manager</li>
+            <li>✓ Custom Service Level Agreement</li>
           </ul>
-          <a href="#" class="price-btn price-btn-ghost" id="btn-enterprise">Contact Sales</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="section-container">
-      <div class="section-header">
-        <span class="section-tag">Testimonials</span>
-        <h2 class="section-title">Loved by teams<br /><span class="gradient-text">across the globe</span></h2>
-      </div>
-
-      <div class="testimonials-grid">
-
-        <div class="testimonial-card" id="testimonial-1">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"ZITOPY AI completely transformed how we handle customer support. Response times dropped by 70% and satisfaction scores are through the roof."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background: linear-gradient(135deg, #8b5cf6, #6366f1)">MK</div>
-            <div>
-              <div class="author-name">Marcus Klein</div>
-              <div class="author-role">CTO, NexaTech GmbH</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card testimonial-featured" id="testimonial-2">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The multimodal capabilities are unmatched. We process images, documents, and audio through a single API. Integration took just a day. Absolute game changer."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6)">AL</div>
-            <div>
-              <div class="author-name">Amara Levi</div>
-              <div class="author-role">Lead Engineer, Starfield AI</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card" id="testimonial-3">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"We evaluated six AI platforms. ZITOPY won on speed, security, and developer experience. Our team shipped 3x faster after switching."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4)">SR</div>
-            <div>
-              <div class="author-name">Sofia Reyes</div>
-              <div class="author-role">Product Director, Orbitlabs</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CTA BANNER ===================== -->
-  <section class="cta-section" id="cta">
-    <div class="cta-orb cta-orb-1"></div>
-    <div class="cta-orb cta-orb-2"></div>
-    <div class="section-container">
-      <div class="cta-card">
-        <h2 class="cta-title">Ready to build with<br /><span class="gradient-text">ZITOPY AI?</span></h2>
-        <p class="cta-subtitle">Join thousands of developers and teams already shipping smarter products.</p>
-        <div class="cta-actions">
-          <a href="#" class="btn-hero-primary" id="btn-cta-primary">Start for Free — No Credit Card</a>
-          <a href="#" class="btn-hero-ghost" id="btn-cta-docs">Read the Docs</a>
+          <a href="#" class="price-btn">Contact Sales</a>
         </div>
       </div>
     </div>
@@ -408,62 +330,19 @@
   <footer class="footer" id="footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <a href="#" class="nav-logo">
-          <span class="logo-icon">⚡</span>
-          <span class="logo-text">ZITOPY<span class="logo-ai"> AI</span></span>
+        <a href="#" class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>PlugToCart</span>
         </a>
-        <p class="footer-tagline">Intelligence redefined for the future of work.</p>
-        <div class="social-links">
-          <a href="#" class="social-link" id="social-twitter" aria-label="Twitter">𝕏</a>
-          <a href="#" class="social-link" id="social-linkedin" aria-label="LinkedIn">in</a>
-          <a href="#" class="social-link" id="social-github" aria-label="GitHub">⌥</a>
-          <a href="#" class="social-link" id="social-discord" aria-label="Discord">◈</a>
-        </div>
+        <p class="footer-tagline">Automating retail commerce on social channels.</p>
       </div>
-
       <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">Product</h4>
-          <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#">Changelog</a></li>
-            <li><a href="#">Roadmap</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">Developers</h4>
-          <ul>
-            <li><a href="#">API Docs</a></li>
-            <li><a href="#">SDKs</a></li>
-            <li><a href="#">Examples</a></li>
-            <li><a href="#">Status</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">Legal</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-            <li><a href="#">Security</a></li>
-          </ul>
-        </div>
+        <p>© 2026 PlugToCart. All rights reserved.</p>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 ZITOPY AI. All rights reserved.</p>
-      <p class="footer-built">Built with ⚡ by the ZITOPY team</p>
     </div>
   </footer>
 
