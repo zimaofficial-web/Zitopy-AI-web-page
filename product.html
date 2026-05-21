@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZITOPY AutoChat — AI-Powered Conversation Automation</title>
+  <meta name="description" content="ZITOPY AutoChat automates your DMs, comments, and customer conversations with AI. Turn every message into a conversion opportunity. Try free today." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ZITOPY AutoChat — AI Conversation Automation" />
+  <meta property="og:description" content="Automate your DMs, replies, and customer chat with intelligent AI. Convert conversations into revenue 24/7." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">ZITOPY<span class="logo-ai"> AI</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#use-cases" class="nav-link">Use Cases</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn-ghost" id="btn-signin">Sign In</a>
+        <a href="#pricing" class="btn-primary" id="btn-get-started">
+          Start Free
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#use-cases">Use Cases</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <a href="#pricing" class="btn-primary mobile-cta">Start Free →</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <!-- Animated background orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="grid-lines"></div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-pill" id="hero-pill">
+          <span class="pill-dot"></span>
+          <span>New · AI Automation 3.0</span>
+          <span class="pill-arrow">↗</span>
+        </div>
+
+        <h1 class="hero-h1" id="hero-h1">
+          Turn Every
+          <br />
+          <span class="text-gradient">Conversation</span>
+          <br />
+          Into Revenue
+        </h1>
+
+        <p class="hero-p" id="hero-p">
+          ZITOPY AutoChat uses advanced AI to reply to DMs, comments, and messages
+          24/7 — qualifying leads, answering questions, and closing sales while you sleep.
+        </p>
+
+        <div class="hero-cta-group" id="hero-cta">
+          <a href="#pricing" class="cta-primary" id="cta-primary">
+            <span>Get Started Free</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#how-it-works" class="cta-ghost" id="cta-demo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Demo
+          </a>
+        </div>
+
+        <div class="hero-trust" id="hero-trust">
+          <div class="trust-avatars">
+            <div class="avatar" style="background: linear-gradient(135deg, #8b5cf6, #6366f1)">AK</div>
+            <div class="avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6)">BL</div>
+            <div class="avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4)">CM</div>
+            <div class="avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444)">DN</div>
+          </div>
+          <div class="trust-text">
+            <span class="stars">★★★★★</span>
+            <span>Loved by <strong>20,000+</strong> businesses</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="hero-visual">
+        <!-- Chat Demo Card -->
+        <div class="chat-demo-card glass-card">
+          <div class="chat-header">
+            <div class="chat-avatar-wrap">
+              <div class="chat-avatar">⚡</div>
+              <span class="online-dot"></span>
+            </div>
+            <div class="chat-header-info">
+              <span class="chat-name">ZITOPY AutoChat</span>
+              <span class="chat-status">AI is responding instantly</span>
+            </div>
+            <div class="chat-badge">LIVE</div>
+          </div>
+
+          <div class="chat-messages" id="chat-messages">
+            <div class="msg msg-in" id="msg1">
+              <span>Hey! I saw your product on Insta 👀 How much is it?</span>
+              <span class="msg-time">2s ago</span>
+            </div>
+            <div class="msg msg-out typing" id="msg2">
+              <span class="typing-dots"><span></span><span></span><span></span></span>
+            </div>
+          </div>
+
+          <div class="chat-quick-replies">
+            <button class="qr-btn" onclick="triggerReply()">💰 View Pricing</button>
+            <button class="qr-btn" onclick="triggerReply()">🎁 Claim Discount</button>
+            <button class="qr-btn" onclick="triggerReply()">📞 Book a Call</button>
+          </div>
+
+          <div class="chat-stats-row">
+            <div class="cstat">
+              <span class="cstat-num">0.8s</span>
+              <span class="cstat-label">Reply time</span>
+            </div>
+            <div class="cstat-div"></div>
+            <div class="cstat">
+              <span class="cstat-num">94%</span>
+              <span class="cstat-label">Satisfaction</span>
+            </div>
+            <div class="cstat-div"></div>
+            <div class="cstat">
+              <span class="cstat-num">3.2×</span>
+              <span class="cstat-label">Conversions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating stat chips -->
+        <div class="float-chip chip-1 glass-card">
+          <span class="chip-icon">📈</span>
+          <div>
+            <div class="chip-val">+312%</div>
+            <div class="chip-lbl">Lead conversion</div>
+          </div>
+        </div>
+        <div class="float-chip chip-2 glass-card">
+          <span class="chip-icon">⚡</span>
+          <div>
+            <div class="chip-val">24/7</div>
+            <div class="chip-lbl">Always online</div>
+          </div>
+        </div>
+        <div class="float-chip chip-3 glass-card">
+          <span class="chip-icon">🤖</span>
+          <div>
+            <div class="chip-val">AI-Powered</div>
+            <div class="chip-lbl">Smart replies</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PLATFORMS TRUST STRIP ===================== -->
+  <section class="platforms-strip" id="platforms">
+    <div class="strip-inner">
+      <span class="strip-label">Works across all your channels</span>
+      <div class="platform-pills">
+        <div class="platform-pill">
+          <span class="platform-icon">💬</span>
+          <span>Instagram DMs</span>
+        </div>
+        <div class="platform-pill">
+          <span class="platform-icon">📘</span>
+          <span>Facebook Messenger</span>
+        </div>
+        <div class="platform-pill">
+          <span class="platform-icon">💚</span>
+          <span>WhatsApp</span>
+        </div>
+        <div class="platform-pill">
+          <span class="platform-icon">🐦</span>
+          <span>X / Twitter</span>
+        </div>
+        <div class="platform-pill">
+          <span class="platform-icon">🌐</span>
+          <span>Live Chat</span>
+        </div>
+        <div class="platform-pill">
+          <span class="platform-icon">✉️</span>
+          <span>Email</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS STRIP ===================== -->
+  <section class="stats-section" id="stats">
+    <div class="stats-inner">
+      <div class="stat-block">
+        <div class="stat-number" data-target="20000">0</div>
+        <div class="stat-label">Businesses using AutoChat</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-block">
+        <div class="stat-number" data-target="312" data-suffix="%">0%</div>
+        <div class="stat-label">Average conversion lift</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-block">
+        <div class="stat-number" data-target="50" data-suffix="M+">0M+</div>
+        <div class="stat-label">Messages automated per month</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-block">
+        <div class="stat-number" data-target="0.8" data-suffix="s" data-float="true">0s</div>
+        <div class="stat-label">Average AI reply time</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="features-section" id="features">
+    <div class="section-wrap">
+      <div class="section-head">
+        <span class="tag-pill">Core Features</span>
+        <h2 class="section-h2">
+          Everything you need to
+          <br />
+          <span class="text-gradient">automate & convert</span>
+        </h2>
+        <p class="section-sub">One AI brain that handles all your customer conversations, qualifies leads, and drives sales autonomously.</p>
+      </div>
+
+      <div class="features-bento">
+
+        <!-- Large feature card -->
+        <div class="bento-card bento-large glass-card" id="feat-replies">
+          <div class="bento-icon-wrap">
+            <div class="bento-icon">💬</div>
+          </div>
+          <h3 class="bento-title">Instant AI Replies</h3>
+          <p class="bento-desc">Respond to every DM and comment within seconds using context-aware AI. Never let a lead go cold again — AutoChat understands intent and replies naturally.</p>
+          <div class="reply-demo">
+            <div class="reply-row">
+              <span class="reply-in">Do you ship internationally? 🌍</span>
+            </div>
+            <div class="reply-row reply-row-out">
+              <span class="reply-out">Yes! We ship to 50+ countries 🚀 Where are you located? I can check delivery times for you!</span>
+              <span class="reply-ai-tag">⚡ AI</span>
+            </div>
+          </div>
+          <div class="bento-glow glow-purple"></div>
+        </div>
+
+        <!-- Small feature card -->
+        <div class="bento-card glass-card" id="feat-qualify">
+          <div class="bento-icon-wrap">
+            <div class="bento-icon">🎯</div>
+          </div>
+          <h3 class="bento-title">Lead Qualification</h3>
+          <p class="bento-desc">AI automatically scores and qualifies leads based on conversation signals, so you only spend time on hot prospects.</p>
+          <div class="score-demo">
+            <div class="score-bar-wrap">
+              <span class="score-label">Lead Score</span>
+              <span class="score-val">87 / 100</span>
+            </div>
+            <div class="score-bar">
+              <div class="score-fill" style="width: 87%"></div>
+            </div>
+            <div class="score-tags">
+              <span class="stag hot">🔥 Hot Lead</span>
+              <span class="stag">Ready to Buy</span>
+            </div>
+          </div>
+          <div class="bento-glow glow-cyan"></div>
+        </div>
+
+        <!-- Small feature card -->
+        <div class="bento-card glass-card" id="feat-flows">
+          <div class="bento-icon-wrap">
+            <div class="bento-icon">🔄</div>
+          </div>
+          <h3 class="bento-title">Smart Flow Builder</h3>
+          <p class="bento-desc">Design conversation flows with our drag-and-drop builder. Branch logic, conditions, delays — build anything without code.</p>
+          <div class="flow-mini">
+            <div class="flow-node fn-trigger">Trigger</div>
+            <div class="flow-line"></div>
+            <div class="flow-node fn-ai active">AI Reply</div>
+            <div class="flow-line"></div>
+            <div class="flow-node fn-action">Action</div>
+          </div>
+          <div class="bento-glow glow-green"></div>
+        </div>
+
+        <!-- Small feature card -->
+        <div class="bento-card glass-card" id="feat-analytics">
+          <div class="bento-icon-wrap">
+            <div class="bento-icon">📊</div>
+          </div>
+          <h3 class="bento-title">Revenue Analytics</h3>
+          <p class="bento-desc">Track exactly how much revenue AutoChat drives. See conversion funnels, top-performing flows, and ROI in real time.</p>
+          <div class="analytics-mini">
+            <div class="ana-bar" style="--h: 40%"></div>
+            <div class="ana-bar" style="--h: 65%"></div>
+            <div class="ana-bar" style="--h: 50%"></div>
+            <div class="ana-bar" style="--h: 85%"></div>
+            <div class="ana-bar" style="--h: 72%"></div>
+            <div class="ana-bar active" style="--h: 95%"></div>
+          </div>
+          <div class="bento-glow glow-orange"></div>
+        </div>
+
+        <!-- Large feature card -->
+        <div class="bento-card bento-large glass-card" id="feat-personalize">
+          <div class="bento-icon-wrap">
+            <div class="bento-icon">✨</div>
+          </div>
+          <h3 class="bento-title">Deep Personalization</h3>
+          <p class="bento-desc">AutoChat remembers every interaction, purchase history, and preference. Every conversation feels personal and human — at infinite scale.</p>
+          <div class="persona-chips">
+            <span class="persona-chip">🛍️ Bought before</span>
+            <span class="persona-chip">📍 Lagos, Nigeria</span>
+            <span class="persona-chip">💬 Prefers casual tone</span>
+            <span class="persona-chip">🎯 High-value customer</span>
+            <span class="persona-chip">🔁 Repeat visitor</span>
+          </div>
+          <div class="bento-glow glow-pink"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="how-section" id="how-it-works">
+    <div class="orb orb-how-1"></div>
+    <div class="orb orb-how-2"></div>
+    <div class="section-wrap">
+      <div class="section-head">
+        <span class="tag-pill">Setup in Minutes</span>
+        <h2 class="section-h2">Live in <span class="text-gradient">3 simple steps</span></h2>
+        <p class="section-sub">No engineers needed. No complex integrations. Just connect, configure, and convert.</p>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-card glass-card" id="step-1">
+          <div class="step-num">01</div>
+          <div class="step-icon-big">🔗</div>
+          <h3 class="step-title">Connect Your Channels</h3>
+          <p class="step-desc">Link your Instagram, WhatsApp, Facebook, or website chat in one click. OAuth-secured, no API keys needed.</p>
+          <div class="step-check">
+            <span class="check-item">✓ Instant OAuth connect</span>
+            <span class="check-item">✓ No technical setup</span>
+          </div>
+        </div>
+
+        <div class="step-arrow-wrap">
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="step-card glass-card active-step" id="step-2">
+          <div class="step-num">02</div>
+          <div class="step-icon-big">🤖</div>
+          <h3 class="step-title">Train Your AI</h3>
+          <p class="step-desc">Tell AutoChat about your products, brand voice, FAQs, and goals. It learns from your content and past conversations in minutes.</p>
+          <div class="step-check">
+            <span class="check-item">✓ Upload product catalog</span>
+            <span class="check-item">✓ Set brand personality</span>
+          </div>
+        </div>
+
+        <div class="step-arrow-wrap">
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="step-card glass-card" id="step-3">
+          <div class="step-num">03</div>
+          <div class="step-icon-big">🚀</div>
+          <h3 class="step-title">Watch Revenue Grow</h3>
+          <p class="step-desc">Go live and let AutoChat handle every conversation. Monitor real-time analytics and watch your conversion rates soar.</p>
+          <div class="step-check">
+            <span class="check-item">✓ Real-time dashboard</span>
+            <span class="check-item">✓ A/B test flows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== USE CASES ===================== -->
+  <section class="usecases-section" id="use-cases">
+    <div class="section-wrap">
+      <div class="section-head">
+        <span class="tag-pill">Use Cases</span>
+        <h2 class="section-h2">Built for every <span class="text-gradient">business type</span></h2>
+        <p class="section-sub">From e-commerce to SaaS, agencies to creators — AutoChat adapts to your industry.</p>
+      </div>
+
+      <div class="usecase-tabs" id="usecase-tabs">
+        <button class="uc-tab active" data-tab="ecommerce" id="tab-ecommerce">🛒 E-commerce</button>
+        <button class="uc-tab" data-tab="saas" id="tab-saas">💻 SaaS</button>
+        <button class="uc-tab" data-tab="creators" id="tab-creators">🎨 Creators</button>
+        <button class="uc-tab" data-tab="agencies" id="tab-agencies">🏢 Agencies</button>
+      </div>
+
+      <div class="usecase-panels">
+        <div class="uc-panel active glass-card" id="panel-ecommerce">
+          <div class="uc-text">
+            <h3>Turn DMs into instant checkouts</h3>
+            <p>When a customer asks "how much?" on your Instagram post, AutoChat responds with pricing, handles objections, sends a payment link, and follows up after purchase — all automatically.</p>
+            <ul class="uc-list">
+              <li>✦ Auto-send product links from comments/DMs</li>
+              <li>✦ Abandoned cart recovery via chat</li>
+              <li>✦ Order tracking & support automation</li>
+              <li>✦ Upsell & cross-sell flows</li>
+            </ul>
+            <a href="#pricing" class="uc-cta">Try for E-commerce →</a>
+          </div>
+          <div class="uc-visual">
+            <div class="uc-card glass-card">
+              <div class="uc-metric">
+                <span class="uc-metric-val">+247%</span>
+                <span class="uc-metric-lbl">Sales from DMs</span>
+              </div>
+              <div class="uc-metric">
+                <span class="uc-metric-val">68%</span>
+                <span class="uc-metric-lbl">Cart recovery rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="uc-panel glass-card" id="panel-saas">
+          <div class="uc-text">
+            <h3>Qualify leads before they even book a call</h3>
+            <p>AutoChat engages every inbound inquiry, asks the right qualification questions, and books demos automatically with your calendar. Your sales team focuses only on sales-ready prospects.</p>
+            <ul class="uc-list">
+              <li>✦ BANT qualification flows</li>
+              <li>✦ Auto calendar booking</li>
+              <li>✦ Trial onboarding sequences</li>
+              <li>✦ Churn prevention alerts</li>
+            </ul>
+            <a href="#pricing" class="uc-cta">Try for SaaS →</a>
+          </div>
+          <div class="uc-visual">
+            <div class="uc-card glass-card">
+              <div class="uc-metric">
+                <span class="uc-metric-val">3.8×</span>
+                <span class="uc-metric-lbl">More demos booked</span>
+              </div>
+              <div class="uc-metric">
+                <span class="uc-metric-val">-62%</span>
+                <span class="uc-metric-lbl">Sales cycle length</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="uc-panel glass-card" id="panel-creators">
+          <div class="uc-text">
+            <h3>Monetize your audience at scale</h3>
+            <p>Engage every follower who comments or DMs, drive them to your courses, merch, or memberships — and build real relationships with your fans at any audience size.</p>
+            <ul class="uc-list">
+              <li>✦ Story reply automation</li>
+              <li>✦ Comment-triggered DM flows</li>
+              <li>✦ Fan engagement sequences</li>
+              <li>✦ Product/course promotion</li>
+            </ul>
+            <a href="#pricing" class="uc-cta">Try for Creators →</a>
+          </div>
+          <div class="uc-visual">
+            <div class="uc-card glass-card">
+              <div class="uc-metric">
+                <span class="uc-metric-val">5×</span>
+                <span class="uc-metric-lbl">Engagement rate</span>
+              </div>
+              <div class="uc-metric">
+                <span class="uc-metric-val">+180%</span>
+                <span class="uc-metric-lbl">Course sales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="uc-panel glass-card" id="panel-agencies">
+          <div class="uc-text">
+            <h3>Deliver results for all your clients</h3>
+            <p>Manage AutoChat for multiple clients from one dashboard. White-label the platform, set up client workspaces, and deliver measurable ROI that retains clients for life.</p>
+            <ul class="uc-list">
+              <li>✦ Multi-client dashboard</li>
+              <li>✦ White-label branding</li>
+              <li>✦ Reseller pricing plans</li>
+              <li>✦ Client reporting suite</li>
+            </ul>
+            <a href="#pricing" class="uc-cta">Try for Agencies →</a>
+          </div>
+          <div class="uc-visual">
+            <div class="uc-card glass-card">
+              <div class="uc-metric">
+                <span class="uc-metric-val">40+</span>
+                <span class="uc-metric-lbl">Clients managed</span>
+              </div>
+              <div class="uc-metric">
+                <span class="uc-metric-val">96%</span>
+                <span class="uc-metric-lbl">Client retention</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-wrap">
+      <div class="section-head">
+        <span class="tag-pill">Social Proof</span>
+        <h2 class="section-h2">Businesses <span class="text-gradient">love AutoChat</span></h2>
+      </div>
+
+      <div class="testi-grid">
+        <div class="testi-card glass-card" id="testi-1">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"We went from manually responding to 200 DMs a day to AutoChat handling 2,000+ with better response quality. Our sales from Instagram alone tripled in 60 days."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899)">FK</div>
+            <div>
+              <div class="testi-name">Fatima Kariuki</div>
+              <div class="testi-role">Founder, Kariuki Fashion</div>
+            </div>
+          </div>
+          <div class="testi-result">
+            <span class="result-num">3×</span>
+            <span class="result-lbl">Sales in 60 days</span>
+          </div>
+        </div>
+
+        <div class="testi-card testi-featured glass-card" id="testi-2">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"The AI doesn't just answer — it SELLS. It handles objections, offers discounts at the right moment, and follows up. I stopped paying a customer support team of 4 people."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background: linear-gradient(135deg, #06b6d4, #6366f1)">JO</div>
+            <div>
+              <div class="testi-name">James Okonkwo</div>
+              <div class="testi-role">CEO, SwiftCommerce Lagos</div>
+            </div>
+          </div>
+          <div class="testi-result">
+            <span class="result-num">$82k</span>
+            <span class="result-lbl">Saved in 6 months</span>
+          </div>
+        </div>
+
+        <div class="testi-card glass-card" id="testi-3">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Set it up in 20 minutes. By the next morning, AutoChat had booked 11 product demos while I slept. It's genuinely magical — and the ROI is insane."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background: linear-gradient(135deg, #10b981, #3b82f6)">SA</div>
+            <div>
+              <div class="testi-name">Sophia Adeyemi</div>
+              <div class="testi-role">Growth Lead, NovaSaaS</div>
+            </div>
+          </div>
+          <div class="testi-result">
+            <span class="result-num">11</span>
+            <span class="result-lbl">Demos booked overnight</span>
+          </div>
+        </div>
+
+        <div class="testi-card glass-card" id="testi-4">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"As a creator with 200K followers, I was drowning in DMs. Now AutoChat qualifies fans for my mentorship, handles FAQ, and drives my course launches on autopilot."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background: linear-gradient(135deg, #f59e0b, #ec4899)">TM</div>
+            <div>
+              <div class="testi-name">Tunde Makinde</div>
+              <div class="testi-role">Content Creator & Coach</div>
+            </div>
+          </div>
+          <div class="testi-result">
+            <span class="result-num">200K</span>
+            <span class="result-lbl">Followers managed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section class="pricing-section" id="pricing">
+    <div class="orb orb-price-1"></div>
+    <div class="section-wrap">
+      <div class="section-head">
+        <span class="tag-pill">Pricing</span>
+        <h2 class="section-h2">Start free, <span class="text-gradient">scale as you grow</span></h2>
+        <p class="section-sub">No contracts. No setup fees. Cancel anytime.</p>
+      </div>
+
+      <div class="billing-toggle" id="billing-toggle">
+        <button class="bill-opt active" id="bill-monthly" onclick="setBilling('monthly')">Monthly</button>
+        <button class="bill-opt" id="bill-annual" onclick="setBilling('annual')">
+          Annual
+          <span class="save-badge">Save 30%</span>
+        </button>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="price-card glass-card" id="price-starter">
+          <div class="price-plan">Starter</div>
+          <div class="price-amount">
+            <span class="price-cur">$</span>
+            <span class="price-val" data-monthly="0" data-annual="0">0</span>
+            <span class="price-period">/mo</span>
+          </div>
+          <p class="price-desc">Perfect for testing AutoChat and getting your first automations live.</p>
+          <ul class="price-list">
+            <li><span class="check-icon">✓</span> 500 AI conversations/month</li>
+            <li><span class="check-icon">✓</span> 1 channel connected</li>
+            <li><span class="check-icon">✓</span> Basic flow builder</li>
+            <li><span class="check-icon">✓</span> Email support</li>
+            <li><span class="muted-icon">✗</span> Lead scoring</li>
+            <li><span class="muted-icon">✗</span> Analytics dashboard</li>
+          </ul>
+          <a href="#" class="price-btn price-btn-ghost" id="btn-starter">Get Started Free</a>
+        </div>
+
+        <div class="price-card price-featured glass-card" id="price-growth">
+          <div class="featured-badge">Most Popular</div>
+          <div class="price-plan">Growth</div>
+          <div class="price-amount">
+            <span class="price-cur">$</span>
+            <span class="price-val" data-monthly="49" data-annual="34">49</span>
+            <span class="price-period">/mo</span>
+          </div>
+          <p class="price-desc">For businesses serious about converting conversations into revenue.</p>
+          <ul class="price-list">
+            <li><span class="check-icon">✓</span> 10,000 AI conversations/month</li>
+            <li><span class="check-icon">✓</span> 5 channels connected</li>
+            <li><span class="check-icon">✓</span> Advanced flow builder</li>
+            <li><span class="check-icon">✓</span> Lead scoring & CRM sync</li>
+            <li><span class="check-icon">✓</span> Revenue analytics</li>
+            <li><span class="check-icon">✓</span> Priority support</li>
+          </ul>
+          <a href="#" class="price-btn price-btn-primary" id="btn-growth">Start 14-Day Trial</a>
+        </div>
+
+        <div class="price-card glass-card" id="price-scale">
+          <div class="price-plan">Scale</div>
+          <div class="price-amount">
+            <span class="price-cur">$</span>
+            <span class="price-val" data-monthly="149" data-annual="104">149</span>
+            <span class="price-period">/mo</span>
+          </div>
+          <p class="price-desc">For high-volume businesses and agencies managing multiple clients.</p>
+          <ul class="price-list">
+            <li><span class="check-icon">✓</span> Unlimited conversations</li>
+            <li><span class="check-icon">✓</span> Unlimited channels</li>
+            <li><span class="check-icon">✓</span> White-label option</li>
+            <li><span class="check-icon">✓</span> Multi-client dashboard</li>
+            <li><span class="check-icon">✓</span> Custom AI training</li>
+            <li><span class="check-icon">✓</span> Dedicated account manager</li>
+          </ul>
+          <a href="#" class="price-btn price-btn-ghost" id="btn-scale">Contact Sales</a>
+        </div>
+
+      </div>
+
+      <div class="price-footer-note">
+        <span>🔒</span>
+        <span>All plans include SSL encryption, GDPR compliance, and a 30-day money-back guarantee.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq-section" id="faq">
+    <div class="section-wrap">
+      <div class="section-head">
+        <span class="tag-pill">FAQ</span>
+        <h2 class="section-h2">Common <span class="text-gradient">questions</span></h2>
+      </div>
+
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item glass-card" id="faq-1">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Does AutoChat work with Instagram?</span>
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-a">Yes! AutoChat works natively with Instagram DMs, story replies, and post comments. It handles all inbound messages automatically according to your configured flows.</div>
+        </div>
+        <div class="faq-item glass-card" id="faq-2">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Will my customers know they're talking to AI?</span>
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-a">AutoChat is designed to be indistinguishable from a human — unless you want it to disclose. It uses natural language, remembers context, and matches your brand voice exactly. You can also set a "hand-off to human" trigger for complex cases.</div>
+        </div>
+        <div class="faq-item glass-card" id="faq-3">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>How long does setup take?</span>
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-a">Most customers are live within 20 minutes. Connect your channel, input your product/service info, customize your first flow, and you're ready. No coding or technical knowledge required.</div>
+        </div>
+        <div class="faq-item glass-card" id="faq-4">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Can I try it for free?</span>
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-a">Absolutely. The Starter plan is free forever with 500 conversations/month. Paid plans include a 14-day free trial — no credit card required to start.</div>
+        </div>
+        <div class="faq-item glass-card" id="faq-5">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>What happens if I exceed my conversation limit?</span>
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-a">You'll receive a notification when approaching your limit. You can upgrade anytime, or we offer conversation top-ups. We'll never cut off ongoing conversations mid-chat.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="cta-banner" id="cta">
+    <div class="orb orb-cta-1"></div>
+    <div class="orb orb-cta-2"></div>
+    <div class="cta-inner">
+      <div class="cta-card glass-card">
+        <div class="cta-icon">⚡</div>
+        <h2 class="cta-h2">
+          Ready to automate your
+          <br />
+          <span class="text-gradient">conversations?</span>
+        </h2>
+        <p class="cta-sub">Join 20,000+ businesses converting chats into customers with ZITOPY AutoChat.</p>
+        <div class="cta-actions">
+          <a href="#pricing" class="cta-primary large" id="cta-bottom-primary">
+            <span>Start Free — No Credit Card</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#" class="cta-ghost large" id="cta-bottom-demo">Book a Demo</a>
+        </div>
+        <div class="cta-guarantee">
+          <span>🔒</span>
+          <span>30-day money-back guarantee · No setup fees · Cancel anytime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">ZITOPY<span class="logo-ai"> AI</span></span>
+        </a>
+        <p class="footer-tag">Turn conversations into conversions — 24/7, at scale.</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" id="soc-twitter" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-btn" id="soc-linkedin" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" id="soc-discord" aria-label="Discord">◈</a>
+          <a href="#" class="social-btn" id="soc-github" aria-label="GitHub">⌥</a>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#use-cases">Use Cases</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Integrations</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Zapier</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ZITOPY AI. All rights reserved.</p>
+      <p>Built with ⚡ by the ZITOPY team</p>
+    </div>
+  </footer>
+
+  <script src="product.js"></script>
+</body>
+</html>

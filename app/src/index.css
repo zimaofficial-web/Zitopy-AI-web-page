@@ -1,0 +1,443 @@
+/* ============================================
+   ZITOPY AI — Global CSS Design System
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+  /* Colors */
+  --clr-bg:          #040810;
+  --clr-bg-2:        #080f20;
+  --clr-surface:     rgba(8, 15, 35, 0.85);
+  --clr-surface-2:   rgba(15, 22, 41, 0.9);
+  --clr-glass:       rgba(255, 255, 255, 0.04);
+  --clr-glass-hover: rgba(255, 255, 255, 0.08);
+
+  --clr-blue:        #2563eb;
+  --clr-blue-2:      #1d4ed8;
+  --clr-blue-glow:   rgba(37, 99, 235, 0.5);
+  --clr-blue-light:  #60a5fa;
+
+  --clr-yellow:      #fbbf24;
+  --clr-yellow-2:    #f59e0b;
+  --clr-yellow-glow: rgba(251, 191, 36, 0.55);
+  --clr-yellow-soft: rgba(251, 191, 36, 0.12);
+
+  --clr-white:       #f8fafc;
+  --clr-white-dim:   rgba(248, 250, 252, 0.7);
+  --clr-muted:       #64748b;
+  --clr-muted-2:     #94a3b8;
+  --clr-border:      rgba(255, 255, 255, 0.08);
+  --clr-border-blue: rgba(37, 99, 235, 0.3);
+
+  /* Typography */
+  --font-sans:       'Inter', system-ui, sans-serif;
+  --font-mono:       'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --radius-sm:       8px;
+  --radius-md:       14px;
+  --radius-lg:       20px;
+  --radius-xl:       28px;
+
+  /* Transitions */
+  --transition:      all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+
+  /* Shadows */
+  --shadow-card:     0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-blue:     0 0 30px rgba(37, 99, 235, 0.35);
+  --shadow-yellow:   0 0 30px rgba(251, 191, 36, 0.35);
+  --shadow-lift:     0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--clr-bg);
+  color: var(--clr-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   CUSTOM SCROLLBARS (Global + Video Feed)
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-bg-2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--clr-blue) 0%, var(--clr-yellow) 100%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--clr-blue-2) 0%, var(--clr-yellow-2) 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--clr-bg);
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATION BASE
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ============================================
+   GRADIENT TEXT UTILITY
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(135deg, var(--clr-blue-light) 0%, var(--clr-white) 45%, var(--clr-yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, var(--clr-blue-light) 0%, var(--clr-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   GLASS EFFECT UTILITY
+   ============================================ */
+.glass {
+  background: var(--clr-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--clr-border);
+}
+
+.glass-blue {
+  background: rgba(37, 99, 235, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--clr-border-blue);
+}
+
+/* ============================================
+   ADVANCED BUTTON STYLES — All 5 Effects
+   ============================================ */
+
+/* --- 1. Neon Glow Button --- */
+.btn-neon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 2px solid var(--clr-yellow);
+  background: transparent;
+  color: var(--clr-yellow);
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: var(--transition);
+}
+
+.btn-neon:hover {
+  background: var(--clr-yellow-soft);
+  box-shadow:
+    0 0 8px var(--clr-yellow),
+    0 0 20px var(--clr-yellow),
+    0 0 40px rgba(251, 191, 36, 0.35),
+    inset 0 0 10px rgba(251, 191, 36, 0.1);
+  transform: translateY(-3px);
+  color: var(--clr-yellow);
+}
+
+/* --- 2. Fill Button --- */
+.btn-fill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--clr-blue);
+  background: transparent;
+  color: var(--clr-blue-light);
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 0;
+}
+
+.btn-fill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--clr-blue) 0%, var(--clr-blue-2) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-fill:hover::before { transform: scaleX(1); }
+
+.btn-fill:hover {
+  color: #fff;
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-3px);
+}
+
+/* --- 3. Slide Button --- */
+.btn-slide {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  background: linear-gradient(135deg, var(--clr-blue), var(--clr-blue-2));
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px var(--clr-blue-glow);
+}
+
+.btn-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.2) 50%,
+    transparent 100%
+  );
+  transition: left 0.55s ease;
+}
+
+.btn-slide:hover::after { left: 100%; }
+
+.btn-slide:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px var(--clr-blue-glow);
+}
+
+/* --- 4. Shake Button --- */
+.btn-shake {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  background: linear-gradient(135deg, var(--clr-yellow) 0%, var(--clr-yellow-2) 100%);
+  color: #0a0f1e;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px var(--clr-yellow-glow);
+}
+
+.btn-shake:hover {
+  animation: shake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  box-shadow: 0 8px 32px var(--clr-yellow-glow);
+}
+
+@keyframes shake {
+  10%, 90%  { transform: translateX(-2px); }
+  20%, 80%  { transform: translateX(3px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60%  { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* --- 5. Flip Button --- */
+.btn-flip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--clr-border);
+  background: var(--clr-glass);
+  backdrop-filter: blur(12px);
+  color: var(--clr-white);
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  perspective: 600px;
+  transition: border-color 0.3s ease;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.btn-flip .btn-flip-front,
+.btn-flip .btn-flip-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+}
+
+.btn-flip .btn-flip-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--clr-blue), var(--clr-yellow));
+  color: #fff;
+  opacity: 0;
+  transform: rotateX(-90deg);
+  border-radius: calc(var(--radius-md) - 2px);
+}
+
+.btn-flip:hover .btn-flip-front {
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+
+.btn-flip:hover .btn-flip-back {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+.btn-flip:hover {
+  border-color: var(--clr-blue);
+}
+
+/* ============================================
+   SECTION LAYOUT
+   ============================================ */
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-tag {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: var(--clr-blue-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--clr-muted-2);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   SMOOTH HOVER LIFT UTILITY
+   ============================================ */
+.hover-lift {
+  transition: var(--transition);
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+/* ============================================
+   BACKGROUND ORB ANIMATIONS
+   ============================================ */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  animation: orb-pulse 8s ease-in-out infinite;
+}
+
+@keyframes orb-pulse {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.6; }
+  33%       { transform: scale(1.08) translate(15px, -15px); opacity: 0.8; }
+  66%       { transform: scale(0.94) translate(-10px, 10px); opacity: 0.5; }
+}
+
+/* ============================================
+   RESPONSIVE HELPERS
+   ============================================ */
+@media (max-width: 768px) {
+  .section-container { padding: 0 1.25rem; }
+}
