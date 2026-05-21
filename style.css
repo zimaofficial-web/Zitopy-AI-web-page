@@ -451,13 +451,49 @@ body.light-mode .glow-btn:hover::after {
 /* --------------------------------------------------------------------------
    iPhone Frame CSS
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   iPhone 15 Pro Max & Galaxy S25 Ultra Mockups
+   -------------------------------------------------------------------------- */
+/* iPhone Side Buttons */
+.phone-wrapper {
+  position: relative;
+}
+.iphone-side-button {
+  position: absolute;
+  background: #2f3033; /* Titanium gray look */
+  width: 3px;
+  border-radius: 2px 0 0 2px;
+  left: -3px;
+  z-index: 1;
+}
+.iphone-side-button.action-btn {
+  top: 70px;
+  height: 14px;
+}
+.iphone-side-button.vol-up-btn {
+  top: 98px;
+  height: 28px;
+}
+.iphone-side-button.vol-down-btn {
+  top: 136px;
+  height: 28px;
+}
+.iphone-side-button.power-btn {
+  right: -3px;
+  left: auto;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  top: 110px;
+  height: 42px;
+}
+
 .iphone-frame {
   position: relative;
   width: 250px;
   height: 520px;
   background: #000;
-  border: 10px solid #1a202c;
-  border-radius: 36px;
+  border: 5px solid #2d2e32; /* Natural titanium edge */
+  border-radius: 38px;
   box-shadow: 
     0 25px 60px rgba(0, 0, 0, 0.6), 
     inset 0 0 4px rgba(255,255,255,0.15);
@@ -466,40 +502,72 @@ body.light-mode .glow-btn:hover::after {
   flex-direction: column;
 }
 
-.iphone-notch {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 22px;
-  background: #1a202c;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  z-index: 10;
-}
-
-.iphone-notch::after {
+.iphone-frame::before {
   content: '';
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #0d121c;
-  border-radius: 50%;
-  top: 8px;
-  right: 25px;
+  inset: 0;
+  border: 2px solid #000; /* Black inner bezel */
+  border-radius: 34px;
+  pointer-events: none;
+  z-index: 9;
 }
 
-/* --------------------------------------------------------------------------
-   Android Frame CSS
-   -------------------------------------------------------------------------- */
+.iphone-dynamic-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 18px;
+  background: #000;
+  border-radius: 12px;
+  z-index: 10;
+  box-shadow: inset 0 0 2px rgba(255,255,255,0.2);
+}
+
+.iphone-dynamic-island::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #111b21;
+  border-radius: 50%;
+  top: 6px;
+  right: 15px;
+}
+
+/* Galaxy S25 Ultra Mockup */
+.phone-wrapper-alt {
+  position: relative;
+}
+.android-side-button {
+  position: absolute;
+  background: #3a3b40;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  right: -3px;
+  z-index: 1;
+}
+.android-side-button.vol-up-btn {
+  top: 85px;
+  height: 30px;
+}
+.android-side-button.vol-down-btn {
+  top: 125px;
+  height: 30px;
+}
+.android-side-button.power-btn {
+  top: 170px;
+  height: 40px;
+}
+
 .android-frame {
   position: relative;
   width: 250px;
   height: 520px;
   background: #000;
-  border: 8px solid #2d3748;
-  border-radius: 28px;
+  border: 5px solid #242528; /* Titanium black edge */
+  border-radius: 12px; /* Galaxy Ultra boxy corner */
   box-shadow: 
     0 25px 60px rgba(0, 0, 0, 0.6), 
     inset 0 0 3px rgba(255,255,255,0.15);
@@ -508,33 +576,59 @@ body.light-mode .glow-btn:hover::after {
   flex-direction: column;
 }
 
+.android-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 9;
+}
+
 .android-camera {
   position: absolute;
-  top: 8px;
+  top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  width: 8px;
-  height: 8px;
-  background: #1a202c;
+  width: 6px;
+  height: 6px;
+  background: #0c0d0f;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 0.5px solid rgba(255,255,255,0.15);
   z-index: 10;
 }
 
-/* Common status bar rules */
+/* Device Status Bars */
 .device-status-bar {
   height: 30px;
   background: var(--wa-bg);
   padding: 0 16px;
-  padding-top: 6px;
+  padding-top: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.65rem;
-  font-family: var(--font-mono);
   color: #fff;
   z-index: 5;
   user-select: none;
+}
+
+.ios-status-bar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 600;
+  padding-top: 12px;
+}
+
+.android-status-bar {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.status-bar-left-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.6rem;
 }
 
 .status-bar-icons {
@@ -704,7 +798,12 @@ body.light-mode .glow-btn:hover::after {
 }
 
 .wa-receipt-tick {
-  color: var(--wa-receipt);
+  color: #8696a0; /* Grey when unread */
+  transition: color 0.3s ease;
+}
+
+.wa-receipt-tick.read {
+  color: var(--wa-receipt); /* Blue when read */
 }
 
 /* Typing state inside chat */
@@ -734,14 +833,83 @@ body.light-mode .glow-btn:hover::after {
   30%            { transform: translateY(-3px); }
 }
 
-/* Message Input Area */
+/* Message Input Area (iOS & Android High-Fidelity Styling) */
 .wa-input-area {
-  background: #1f2c34;
   padding: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  background: #1f2c34;
+}
+
+/* iOS Specific Input */
+.ios-input-area {
+  background: #121b22;
+  padding: 6px 12px;
+  gap: 12px;
+  border-top: none;
+}
+.ios-input-area .wa-icon-add {
+  font-size: 1.4rem;
+  color: #007aff;
+  font-weight: 300;
+  cursor: pointer;
+  order: 1;
+}
+.ios-input-area .wa-input-placeholder {
+  order: 2;
+  background: #2c2c2e;
+  border-radius: 18px;
+  padding: 6px 12px;
+  color: #8e8e93;
+  font-size: 0.75rem;
+  border: 0.5px solid #3a3a3c;
+  flex: 1;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.ios-input-area .wa-icon-mic {
+  order: 3;
+  font-size: 1.1rem;
+  color: #007aff;
+  cursor: pointer;
+}
+
+/* Android Specific Input (Samsung S25 style) */
+.android-input-area {
+  background: transparent;
+  padding: 6px 8px;
+  gap: 6px;
+  border-top: none;
+}
+.android-input-area .wa-icon-add {
+  order: 1;
+  font-size: 1.1rem;
+  color: #8696a0;
+  cursor: pointer;
+}
+.android-input-area .wa-input-placeholder {
+  order: 2;
+  background: #2a3942;
+  border-radius: 24px;
+  padding: 8px 14px;
+  color: #8696a0;
+  font-size: 0.72rem;
+  flex: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.android-input-area .wa-icon-mic {
+  order: 3;
+  background: #00a884;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .wa-input-placeholder {
@@ -762,8 +930,44 @@ body.light-mode .glow-btn:hover::after {
   font-size: 1rem;
 }
 
+/* iOS Specific Header Styling */
+.ios-chat-window .wa-header {
+  background: #1f2c34;
+  padding: 10px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.ios-chat-window .wa-back-btn {
+  color: #007aff;
+  font-weight: 500;
+  font-size: 0.82rem;
+  margin-right: 4px;
+}
+.ios-chat-window .wa-profile-name {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+}
+.ios-chat-window .wa-ios-icon {
+  color: #007aff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Android Specific Header Styling */
+.android-chat-window .wa-header {
+  background: #1f2c34;
+  padding: 10px 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.android-chat-window .wa-back-btn {
+  color: #e9edef;
+  font-size: 1.1rem;
+}
+.android-chat-window .wa-profile-name {
+  font-size: 0.75rem;
+}
+
 /* ==========================================================================
-   LAPTOP SHOWCASE SECTION (WhatsApp Web Interface)
+   LAPTOP SHOWCASE SECTION (MacBook Style with opening animation)
    ========================================================================== */
 .laptop-section {
   position: relative;
@@ -778,36 +982,74 @@ body.light-mode .glow-btn:hover::after {
   display: flex;
   flex-direction: column;
   align-items: center;
+  perspective: 1500px; /* Enable 3D depth for folder hinge */
+  transform-style: preserve-3d;
 }
 
-/* Laptop Bezel Frame */
+/* Laptop Bezel Frame (MacBook Style display) */
 .laptop-frame {
   position: relative;
   width: 90%;
   max-width: 800px;
   height: 460px;
-  background: #1e293b;
-  border: 14px solid #111827;
-  border-radius: 20px 20px 0 0;
+  background: #0d0f12;
+  border: 12px solid #000000; /* Super thin bezel */
+  border-radius: 16px 16px 0 0;
   box-shadow: 
-    0 30px 70px rgba(0,0,0,0.8),
+    0 35px 80px rgba(0,0,0,0.85),
     inset 0 0 10px rgba(255,255,255,0.05);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   z-index: 5;
+  
+  /* Hinge opening animation */
+  transform-origin: bottom center;
+  transform: rotateX(-95deg);
+  opacity: 0;
+  animation: macbook-open-animation 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.6s;
+}
+
+/* MacBook Notch style */
+.macbook-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95px;
+  height: 12px;
+  background: #000;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 10;
+}
+
+@keyframes macbook-open-animation {
+  0% {
+    transform: rotateX(-95deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
 }
 
 .laptop-webcam {
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 50%;
   transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  background: #030712;
+  width: 5px;
+  height: 5px;
+  background: #07090e;
   border-radius: 50%;
-  z-index: 10;
+  border: 0.5px solid rgba(255,255,255,0.05);
+  z-index: 11;
 }
 
 .laptop-screen {

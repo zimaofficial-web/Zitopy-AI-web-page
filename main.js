@@ -266,32 +266,32 @@ function initThemeToggle() {
 function initWhatsAppSimulators() {
   // ScentLux Perfumes (iPhone Mockup)
   const scentluxMessages = [
-    { type: 'out', text: "Do you have any recommendations for a long-lasting woody fragrance?", time: '9:15 AM', delay: 1000, typeDelay: 1800 },
-    { type: 'in', text: "Welcome to ScentLux! 🪵 For long-lasting woody notes, I highly recommend our *Oud Majestic* (₦24,500) and *Cedar Forest* (₦18,000). Both have a 12+ hour sillage. Would you like to check out or see other collections?", time: '9:15 AM', delay: 2000, typeDelay: 3200 },
-    { type: 'out', text: "Let's go with Oud Majestic. Do you offer delivery to Ikeja?", time: '9:16 AM', delay: 2200, typeDelay: 1500 },
-    { type: 'in', text: "Perfect choice! Yes, we deliver to Ikeja (Standard: ₦1,500, Express: ₦3,000). Here is your order breakdown:<br>- 1x Oud Majestic EDP (100ml): ₦24,500<br>- Delivery (Ikeja Standard): ₦1,500<br>Total: **₦26,000**", time: '9:16 AM', delay: 2000, typeDelay: 3400 },
-    { type: 'in', text: "💳 Tap here to pay securely via card or bank transfer: <span class='wa-link'>pay.zitopy.com/scentlux/5092</span>", time: '9:17 AM', delay: 1200, typeDelay: 1800 },
-    { type: 'in', text: "🎉 Payment received! Your order is confirmed. Our dispatch rider will contact you tomorrow morning.", time: '9:18 AM', delay: 4000, typeDelay: 2200 }
+    { type: 'out', text: "Do you have any recommendations for a long-lasting woody fragrance?", time: '9:41 AM', delay: 1000, typeDelay: 1800 },
+    { type: 'in', text: "Welcome to ScentLux! 🪵 For long-lasting woody notes, I highly recommend our *Oud Majestic* (₦24,500) and *Cedar Forest* (₦18,000). Both have a 12+ hour sillage. Would you like to check out or see other collections?", time: '9:41 AM', delay: 2000, typeDelay: 3200 },
+    { type: 'out', text: "Let's go with Oud Majestic. Do you offer delivery to Ikeja?", time: '9:42 AM', delay: 2200, typeDelay: 1500 },
+    { type: 'in', text: "Perfect choice! Yes, we deliver to Ikeja (Standard: ₦1,500, Express: ₦3,000). Here is your order breakdown:<br>- 1x Oud Majestic EDP (100ml): ₦24,500<br>- Delivery (Ikeja Standard): ₦1,500<br>Total: **₦26,000**", time: '9:42 AM', delay: 2000, typeDelay: 3400 },
+    { type: 'in', text: "💳 Tap here to pay securely via card or bank transfer: <span class='wa-link'>pay.zitopy.com/scentlux/5092</span>", time: '9:43 AM', delay: 1200, typeDelay: 1800 },
+    { type: 'in', text: "🎉 Payment received! Your order is confirmed. Our dispatch rider will contact you tomorrow morning.", time: '9:43 AM', delay: 4000, typeDelay: 2200 }
   ];
 
   // TrendThread Boutique (Android Mockup)
   const trendthreadMessages = [
-    { type: 'out', text: "Hi, is the Velvet Slip Dress still available in size M?", time: '9:16 AM', delay: 1500, typeDelay: 1500 },
-    { type: 'in', text: "Hi there! Let me check our stock... 👗 Yes! We have 3 Velvet Slip Dresses in size M (Crimson Red & Midnight Black). They are currently ₦12,500 each. Would you like me to reserve one?", time: '9:16 AM', delay: 2200, typeDelay: 3000 },
-    { type: 'out', text: "Awesome! I'll take the Midnight Black one. And please add a silver pendant necklace if you have.", time: '9:17 AM', delay: 2200, typeDelay: 2000 },
-    { type: 'in', text: "Added! 💎 Here is your boutique order:<br>- 1x Velvet Slip Dress (Midnight Black, M): ₦12,500<br>- 1x Minimalist Silver Pendant: ₦4,500<br>Total: **₦17,000**", time: '9:17 AM', delay: 2000, typeDelay: 3000 },
-    { type: 'in', text: "💳 Generate your secure checkout link: <span class='wa-link'>pay.zitopy.com/trendthread/6102</span>", time: '9:18 AM', delay: 1200, typeDelay: 1800 },
-    { type: 'in', text: "🎉 Paid! We've reserved your items and packaged them. Standard shipping leaves at 2 PM today.", time: '9:19 AM', delay: 4000, typeDelay: 2200 }
+    { type: 'out', text: "Hi, is the Velvet Slip Dress still available in size M?", time: '9:41 AM', delay: 1500, typeDelay: 1500 },
+    { type: 'in', text: "Hi there! Let me check our stock... 👗 Yes! We have 3 Velvet Slip Dresses in size M (Crimson Red & Midnight Black). They are currently ₦12,500 each. Would you like me to reserve one?", time: '9:41 AM', delay: 2200, typeDelay: 3000 },
+    { type: 'out', text: "Awesome! I'll take the Midnight Black one. And please add a silver pendant necklace if you have.", time: '9:42 AM', delay: 2200, typeDelay: 2000 },
+    { type: 'in', text: "Added! 💎 Here is your boutique order:<br>- 1x Velvet Slip Dress (Midnight Black, M): ₦12,500<br>- 1x Minimalist Silver Pendant: ₦4,500<br>Total: **₦17,000**", time: '9:42 AM', delay: 2000, typeDelay: 3000 },
+    { type: 'in', text: "💳 Generate your secure checkout link: <span class='wa-link'>pay.zitopy.com/trendthread/6102</span>", time: '9:43 AM', delay: 1200, typeDelay: 1800 },
+    { type: 'in', text: "🎉 Paid! We've reserved your items and packaged them. Standard shipping leaves at 2 PM today.", time: '9:44 AM', delay: 4000, typeDelay: 2200 }
   ];
 
   // BiteBound Restaurant (Laptop Mockup)
   const biteboundMessages = [
-    { type: 'out', text: "Hello, do you open for lunch deliveries now? I want to order a family platter.", time: '9:15 AM', delay: 2000, typeDelay: 1500, sideText: "Lunch deliveries?" },
-    { type: 'in', text: "Hello from BiteBound! 🍖 Yes, we are open! Our popular *Grill Family Feast* is ₦22,000 (includes 1kg ribs, 4 chicken wings, corn, and fries). We also have the *Spicy Seafood Platter* (₦28,000). What can I get for you?", time: '9:16 AM', delay: 2500, typeDelay: 3500, sideText: "Hello from BiteBound! 🍖" },
-    { type: 'out', text: "Let's do the Grill Family Feast. Add extra barbecue sauce and 2 bottles of Chapman.", time: '9:16 AM', delay: 2500, typeDelay: 2000, sideText: "Grill Family Feast..." },
-    { type: 'in', text: "Got it! Barbecue sauce is free, and 2 bottles of Chapman are ₦2,000. Here's your order:<br>- 1x Grill Family Feast platter: ₦22,000<br>- 2x House Chapman: ₦2,000<br>Total: **₦24,000**", time: '9:17 AM', delay: 2500, typeDelay: 3000, sideText: "Got it! Barbecue..." },
-    { type: 'in', text: "💳 Complete payment here to send directly to the kitchen: <span class='wa-link'>pay.zitopy.com/bitebound/7291</span>", time: '9:17 AM', delay: 1200, typeDelay: 1800, sideText: "💳 Complete payment..." },
-    { type: 'in', text: "🎉 Payment Confirmed! 👨‍🍳 Order #7291 has been sent to the kitchen. Est. prep and delivery time: 40 minutes.", time: '9:18 AM', delay: 4000, typeDelay: 2200, sideText: "Order #7291 sent to..." }
+    { type: 'out', text: "Hello, do you open for lunch deliveries now? I want to order a family platter.", time: '9:41 AM', delay: 2000, typeDelay: 1500, sideText: "Lunch deliveries?" },
+    { type: 'in', text: "Hello from BiteBound! 🍖 Yes, we are open! Our popular *Grill Family Feast* is ₦22,000 (includes 1kg ribs, 4 chicken wings, corn, and fries). We also have the *Spicy Seafood Platter* (₦28,000). What can I get for you?", time: '9:42 AM', delay: 2500, typeDelay: 3500, sideText: "Hello from BiteBound! 🍖" },
+    { type: 'out', text: "Let's do the Grill Family Feast. Add extra barbecue sauce and 2 bottles of Chapman.", time: '9:42 AM', delay: 2500, typeDelay: 2000, sideText: "Grill Family Feast..." },
+    { type: 'in', text: "Got it! Barbecue sauce is free, and 2 bottles of Chapman are ₦2,000. Here's your order:<br>- 1x Grill Family Feast platter: ₦22,000<br>- 2x House Chapman: ₦2,000<br>Total: **₦24,000**", time: '9:43 AM', delay: 2500, typeDelay: 3000, sideText: "Got it! Barbecue..." },
+    { type: 'in', text: "💳 Complete payment here to send directly to the kitchen: <span class='wa-link'>pay.zitopy.com/bitebound/7291</span>", time: '9:43 AM', delay: 1200, typeDelay: 1800, sideText: "💳 Complete payment..." },
+    { type: 'in', text: "🎉 Payment Confirmed! 👨‍🍳 Order #7291 has been sent to the kitchen. Est. prep and delivery time: 40 minutes.", time: '9:44 AM', delay: 4000, typeDelay: 2200, sideText: "Order #7291 sent to..." }
   ];
 
   // Helper to scroll chats
@@ -328,7 +328,7 @@ function initWhatsAppSimulators() {
     }
   }
 
-  // Add a standard message bubble
+  // Add a standard message bubble with tick mark animations
   function addMessage(bodyElement, {
     type = 'in', // 'in' or 'out'
     content = '',
@@ -339,16 +339,37 @@ function initWhatsAppSimulators() {
     const bubble = document.createElement('div');
     bubble.className = `wa-bubble ${type}`;
 
-    bubble.innerHTML = `
-      <div class="wa-msg-content">${content}</div>
-      <div class="wa-bubble-meta">
-        <span class="wa-msg-time">${time}</span>
-        ${type === 'out' ? `<span class="wa-receipt-tick">✓✓</span>` : ''}
-      </div>
-    `;
+    if (type === 'out') {
+      bubble.innerHTML = `
+        <div class="wa-msg-content">${content}</div>
+        <div class="wa-bubble-meta">
+          <span class="wa-msg-time">${time}</span>
+          <span class="wa-receipt-tick">✓</span>
+        </div>
+      `;
+      
+      // Animate checkmark receipt delivery states
+      const tick = bubble.querySelector('.wa-receipt-tick');
+      if (tick) {
+        setTimeout(() => {
+          tick.textContent = '✓✓'; // Delivered
+        }, 500);
+        setTimeout(() => {
+          tick.classList.add('read'); // Read (turned blue)
+        }, 1000);
+      }
+    } else {
+      bubble.innerHTML = `
+        <div class="wa-msg-content">${content}</div>
+        <div class="wa-bubble-meta">
+          <span class="wa-msg-time">${time}</span>
+        </div>
+      `;
+    }
 
     bodyElement.appendChild(bubble);
     scrollChat(bodyElement);
+    return bubble;
   }
 
   // Character typing animation for the customer's input placeholder
@@ -382,6 +403,10 @@ function initWhatsAppSimulators() {
 
     if (!chatBody || !inputEl) return;
 
+    // Resolve header status element for online/typing labels
+    const chatWindow = chatBody.closest('.wa-chat-window, .wa-web-main-chat');
+    const statusEl = chatWindow ? chatWindow.querySelector('.wa-profile-status, .wa-web-chat-status') : null;
+
     let currentTimeout = null;
     let currentInterval = null;
 
@@ -389,8 +414,13 @@ function initWhatsAppSimulators() {
       // Clear previous logs
       chatBody.innerHTML = '';
       inputEl.textContent = 'Type a message...';
+      if (statusEl) {
+        statusEl.textContent = 'online';
+        statusEl.style.color = '';
+      }
       if (sideMsgEl) {
         sideMsgEl.textContent = 'Active chat...';
+        sideMsgEl.style.color = '';
       }
 
       let stepIndex = 0;
@@ -417,21 +447,36 @@ function initWhatsAppSimulators() {
               });
               if (sideMsgEl && msg.sideText) {
                 sideMsgEl.textContent = msg.sideText;
+                sideMsgEl.style.color = '';
               }
               stepIndex++;
               executeNextStep();
             });
           } else {
-            // AI responding: show typing bubble indicator
+            // AI responding: show typing bubble indicator and update header status label
             showTyping(chatBody);
+            if (statusEl) {
+              statusEl.textContent = 'typing...';
+              statusEl.style.color = '#00a884'; // Green typing color
+            }
+            if (sideMsgEl) {
+              sideMsgEl.textContent = 'typing...';
+              sideMsgEl.style.color = '#00a884';
+            }
+
             currentTimeout = setTimeout(() => {
               addMessage(chatBody, {
                 type: 'in',
                 content: msg.text,
                 time: msg.time
               });
+              if (statusEl) {
+                statusEl.textContent = 'online';
+                statusEl.style.color = '';
+              }
               if (sideMsgEl && msg.sideText) {
                 sideMsgEl.textContent = msg.sideText;
+                sideMsgEl.style.color = '';
               }
               stepIndex++;
               executeNextStep();
@@ -447,28 +492,28 @@ function initWhatsAppSimulators() {
     setTimeout(runLoop, initialOffset);
   }
 
-  // Initialize and run ScentLux Perfumes on iPhone
+  // Initialize and run ScentLux Perfumes on iPhone 15 Pro Max
   runChatSimulator({
     chatBodyId: 'scentlux-chat-body',
     inputSelector: '#iphone-simulator .wa-input-placeholder',
     messages: scentluxMessages,
-    initialOffset: 0
+    initialOffset: 800
   });
 
-  // Initialize and run TrendThread Boutique on Android
+  // Initialize and run TrendThread Boutique on Galaxy S25 Ultra
   runChatSimulator({
     chatBodyId: 'trendthread-chat-body',
     inputSelector: '#android-simulator .wa-input-placeholder',
     messages: trendthreadMessages,
-    initialOffset: 2500 // Staggered delay
+    initialOffset: 3200 // Staggered delay
   });
 
-  // Initialize and run BiteBound Restaurant on Laptop
+  // Initialize and run BiteBound Restaurant on MacBook Pro (runs after lid opening finishes at ~3s)
   runChatSimulator({
     chatBodyId: 'bitebound-chat-body',
     inputSelector: '.laptop-container .wa-web-input-bar',
     messages: biteboundMessages,
     sideMsgId: 'grill-side-msg',
-    initialOffset: 5000 // Staggered delay
+    initialOffset: 4800 // Delays typing until MacBook is open
   });
 }
